@@ -30,9 +30,9 @@ export function WhatWeDo() {
           <h2 className="text-3xl font-bold text-primary mb-4 tracking-tight">What We Do</h2>
           <div className="w-20 h-1 bg-primary mb-8"></div>
           <div className="bg-white p-6 border-l-4 border-primary shadow-sm mb-12">
-            <h3 className="text-lg font-bold text-primary mb-2">Who We Are</h3>
+            <h3 className="text-lg font-bold text-primary mb-2">About YnY AI</h3>
             <p className="text-muted-foreground leading-relaxed">
-              YnY Platforms was founded on a simple belief: technology initiatives succeed when architecture, engineering, and business strategy work together. Our team brings decades of experience designing enterprise systems, digital platforms, cloud transformations, and AI-powered solutions across highly regulated industries.
+              YnY AI is a founder-led venture focused on helping organizations modernize technology, accelerate digital transformation and unlock the value of AI. The venture combines consulting, architecture expertise and product innovation to solve complex enterprise challenges.
             </p>
           </div>
         </div>

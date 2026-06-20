@@ -25,7 +25,10 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Building Intelligent Enterprise Platforms for the AI Era
+            Abdul Mannan
+            <span className="block text-2xl md:text-3xl lg:text-4xl text-accent font-medium mt-4">
+              Enterprise Architect | AI Strategist | Product Builder
+            </span>
           </motion.h1>
           
           <motion.p 
@@ -34,7 +37,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            YnY Platforms combines enterprise architecture, artificial intelligence, and engineering excellence to help organizations modernize systems, accelerate innovation, and build scalable digital products.
+            Helping organizations modernize technology platforms, adopt AI responsibly, and build scalable enterprise systems.
           </motion.p>
           
           <motion.div 
@@ -48,7 +51,7 @@ export function Hero() {
               className="inline-flex items-center justify-center h-14 px-8 bg-primary text-primary-foreground font-medium transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               data-testid="link-contact-hero"
             >
-              Schedule Consultation
+              Schedule a Consultation
             </Link>
             <Link 
               href="/products"
@@ -65,8 +68,8 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
-              Trusted by enterprises across healthcare, government, legal, and financial services.
+            <p className="text-xs md:text-sm font-semibold text-muted-foreground uppercase tracking-wide leading-relaxed">
+              20+ Years Experience &bull; Enterprise Architecture &bull; Cloud & Platform Engineering &bull; AI Transformation &bull; Digital Modernization
             </p>
           </motion.div>
         </div>

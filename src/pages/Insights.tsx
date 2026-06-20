@@ -20,7 +20,7 @@ export default function Insights() {
           <div className="container mx-auto px-6">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Insights & Thinking</h1>
             <p className="text-xl text-slate-300 max-w-2xl">
-              Perspectives on architecture, AI, and engineering from our leadership and technical teams.
+              Perspectives on architecture, AI, and engineering from Abdul Mannan and the YnY AI advisory practice.
             </p>
           </div>
         </div>

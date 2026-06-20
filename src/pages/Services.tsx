@@ -10,7 +10,7 @@ export default function Services() {
           <div className="container mx-auto px-6">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Enterprise Services</h1>
             <p className="text-xl text-slate-300 max-w-2xl">
-              From strategic advisory to dedicated engineering teams, we partner with enterprises to execute digital transformation.
+              From strategic advisory to managed engineering delivery, we partner with enterprises to execute digital transformation.
             </p>
           </div>
         </div>

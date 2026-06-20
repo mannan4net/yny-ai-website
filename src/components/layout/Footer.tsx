@@ -12,11 +12,13 @@ export function Footer() {
               <div className="bg-white flex items-center justify-center rounded-sm overflow-hidden p-1">
                 <img src={logoSrc} alt="YnY Platforms" className="h-8 w-8 object-contain" />
               </div>
-              <span className="text-2xl font-bold tracking-tight text-white">YnY</span>
+              <span className="text-2xl font-bold tracking-tight text-white">YnY AI</span>
             </div>
-            <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              Building Enterprise-Scale Digital Platforms, AI Solutions & Engineering Excellence.
-            </p>
+            <div className="text-slate-400 text-sm leading-relaxed mb-6">
+              <p className="font-semibold text-white">Abdul Mannan</p>
+              <p className="text-slate-300 text-xs mb-2">Founder, YnY AI</p>
+              <p className="text-xs">Enterprise Architecture | AI Strategy | Product Innovation</p>
+            </div>
           </div>
           
           <div>

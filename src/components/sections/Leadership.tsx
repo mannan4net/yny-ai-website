@@ -6,7 +6,7 @@ export function Leadership() {
     <section className="py-24 bg-muted">
       <div className="container mx-auto px-6">
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-primary mb-4 tracking-tight">Leadership</h2>
+          <h2 className="text-3xl font-bold text-primary mb-4 tracking-tight">Founder</h2>
           <div className="w-20 h-1 bg-primary"></div>
         </div>
 

@@ -45,7 +45,7 @@ export default function Contact() {
           <div className="container mx-auto px-6">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Contact Us</h1>
             <p className="text-xl text-slate-300 max-w-2xl">
-              Discuss your enterprise requirements with our architecture and engineering teams.
+              Discuss your enterprise requirements with Abdul Mannan and the YnY AI advisory practice.
             </p>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function Contact() {
               
               <div className="pt-12 border-t border-border">
                 <p className="text-muted-foreground">
-                  Our team typically responds to all enterprise inquiries within one business day.
+                  Abdul Mannan and the YnY AI advisory practice typically respond to all enterprise inquiries within one business day.
                 </p>
               </div>
             </div>
