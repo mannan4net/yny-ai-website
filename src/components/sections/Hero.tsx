@@ -2,8 +2,15 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 
 export function Hero() {
+  const metrics = [
+    { value: "20+", label: "Years Experience" },
+    { value: "Enterprise", label: "Architecture" },
+    { value: "AI & Knowledge", label: "Platforms" },
+    { value: "Government Scale", label: "Systems" },
+  ];
+
   return (
-    <section className="relative overflow-hidden bg-white pt-24 pb-32 md:pt-32 md:pb-40 border-b border-border">
+    <section className="relative overflow-hidden bg-white min-h-[75vh] lg:min-h-[85vh] flex items-center pt-24 pb-12 lg:pt-32 lg:pb-16 border-b border-border">
       {/* Abstract geometric background with architectural grid */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-20" 
@@ -17,63 +24,142 @@ export function Hero() {
         <div className="absolute top-40 -left-20 w-72 h-72 bg-secondary opacity-5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl">
-          <motion.h1 
-            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-primary leading-[1.1] mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Abdul Mannan
-            <span className="block text-2xl md:text-3xl lg:text-4xl text-accent font-medium mt-4">
-              Enterprise Architect | AI Strategist | Product Builder
-            </span>
-          </motion.h1>
+      <div className="container mx-auto px-6 relative z-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          <motion.p 
-            className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            Helping organizations modernize technology platforms, adopt AI responsibly, and build scalable enterprise systems.
-          </motion.p>
-          
+          {/* Left Side: Brand Copy & Actions */}
+          <div className="lg:col-span-7 space-y-8">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-4"
+            >
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-primary leading-[1.05] max-w-3xl">
+                <span className="block text-primary">Knowledge.</span>
+                <span className="block text-primary">Intelligence.</span>
+                <span className="block text-primary">Execution.</span>
+                <span className="block text-accent/80 text-lg md:text-xl lg:text-2xl font-bold tracking-tight mt-6 leading-relaxed">
+                  Enterprise AI Platforms Built on Real Architecture Experience.
+                </span>
+              </h1>
+            </motion.div>
+            
+            <motion.p 
+              className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              We build practical AI, legal intelligence, and engineering platforms backed by more than two decades of enterprise architecture experience across government, healthcare, finance, and large-scale digital transformation programs.
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 pt-2"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <Link 
+                href="/products"
+                className="inline-flex items-center justify-center h-14 px-8 bg-primary text-primary-foreground font-semibold hover:bg-primary/95 transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-none shadow-sm"
+                data-testid="link-products-hero"
+              >
+                Explore Platforms
+              </Link>
+              <Link 
+                href="/contact"
+                className="inline-flex items-center justify-center h-14 px-8 bg-white border border-border text-primary font-semibold hover:bg-muted transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-none shadow-sm"
+                data-testid="link-contact-hero"
+              >
+                Talk to Us
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* Right Side: Abstract systems blueprint illustration (Architectural Linework) */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            className="lg:col-span-5 hidden lg:block"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Link 
-              href="/contact"
-              className="inline-flex items-center justify-center h-14 px-8 bg-primary text-primary-foreground font-medium transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-              data-testid="link-contact-hero"
-            >
-              Schedule a Consultation
-            </Link>
-            <Link 
-              href="/products"
-              className="inline-flex items-center justify-center h-14 px-8 bg-white border border-border text-primary font-medium transition-colors hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-              data-testid="link-products-hero"
-            >
-              Explore Products
-            </Link>
-          </motion.div>
+            <div className="w-full aspect-square border border-border p-6 bg-white shadow-sm flex items-center justify-center relative select-none">
+              {/* Decorative Blueprint SVG Grid */}
+              <svg viewBox="0 0 400 400" className="w-full h-full text-primary" fill="none">
+                {/* Micro architectural background grids */}
+                <defs>
+                  <pattern id="microgrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="hsl(var(--border))" strokeWidth="0.5" opacity="0.3" />
+                  </pattern>
+                </defs>
+                <rect width="400" height="400" fill="url(#microgrid)" />
 
-          <motion.div
-            className="pt-8 border-t border-border"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <p className="text-xs md:text-sm font-semibold text-muted-foreground uppercase tracking-wide leading-relaxed">
-              20+ Years Experience &bull; Enterprise Architecture &bull; Cloud & Platform Engineering &bull; AI Transformation &bull; Digital Modernization
-            </p>
+                {/* Concentric System Rings */}
+                <circle cx="200" cy="200" r="140" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 4" opacity="0.3" />
+                <circle cx="200" cy="200" r="100" stroke="currentColor" strokeWidth="0.75" opacity="0.5" />
+                <circle cx="200" cy="200" r="60" stroke="currentColor" strokeWidth="1" opacity="0.8" />
+                <circle cx="200" cy="200" r="10" stroke="currentColor" strokeWidth="2" fill="currentColor" />
+
+                {/* Crosshairs */}
+                <line x1="20" y1="200" x2="380" y2="200" stroke="currentColor" strokeWidth="0.5" opacity="0.2" />
+                <line x1="200" y1="20" x2="200" y2="380" stroke="currentColor" strokeWidth="0.5" opacity="0.2" />
+
+                {/* Diagonal Blueprint Guides */}
+                <line x1="72" y1="72" x2="328" y2="328" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" opacity="0.25" />
+                <line x1="72" y1="328" x2="328" y2="72" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" opacity="0.25" />
+
+                {/* Intersecting System Junction Nodes */}
+                <circle cx="94" cy="94" r="4" stroke="currentColor" strokeWidth="1" fill="white" />
+                <circle cx="306" cy="306" r="4" stroke="currentColor" strokeWidth="1" fill="white" />
+                <circle cx="306" cy="94" r="4" stroke="currentColor" strokeWidth="1" fill="white" />
+                <circle cx="94" cy="306" r="4" stroke="currentColor" strokeWidth="1" fill="white" />
+
+                <circle cx="200" cy="100" r="3" fill="currentColor" />
+                <circle cx="200" cy="300" r="3" fill="currentColor" />
+                <circle cx="100" cy="200" r="3" fill="currentColor" />
+                <circle cx="300" cy="200" r="3" fill="currentColor" />
+
+                {/* Blueprint Dimension Lines & Labels */}
+                <path d="M 50 360 L 50 370 M 350 360 L 350 370 M 50 365 L 350 365" stroke="currentColor" strokeWidth="0.75" opacity="0.4" />
+                <text x="200" y="358" textAnchor="middle" className="font-mono text-[9px] uppercase tracking-widest font-bold fill-accent" opacity="0.7">
+                  SYSTEM CORE // INTEGRATED
+                </text>
+
+                {/* Top Blueprint Dimension Labels */}
+                <text x="200" y="45" textAnchor="middle" className="font-mono text-[8px] uppercase tracking-wider fill-muted-foreground" opacity="0.6">
+                  SECURE ENTERPRISE LAYER
+                </text>
+              </svg>
+            </div>
           </motion.div>
+          
         </div>
+
+        {/* Credibility metric cards at the bottom */}
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-10 border-t border-border mt-16"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          {metrics.map((metric, index) => (
+            <div 
+              key={index}
+              className="p-5 border border-border bg-white shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between"
+            >
+              <div className="text-xl md:text-2xl font-bold text-primary mb-2">
+                {metric.value}
+              </div>
+              <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                {metric.label}
+              </div>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
 }
+
+

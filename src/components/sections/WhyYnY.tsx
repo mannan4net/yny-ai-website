@@ -3,65 +3,92 @@ import { motion } from "framer-motion";
 export function WhyYnY() {
   const cards = [
     {
-      title: "Deep Enterprise Experience",
-      desc: "More than two decades of experience designing enterprise systems, cloud transformations, and digital platforms across highly regulated industries like healthcare, government, and finance."
+      title: "Enterprise Experience",
+      desc: "Backed by more than two decades of architecture and system delivery experience across complex organizations."
     },
     {
-      title: "Architecture First Thinking",
-      desc: "Every engagement begins with a structured architectural assessment. Systemic risks and constraints are identified before writing code, ensuring every technology investment is sound and scalable."
+      title: "AI With Governance",
+      desc: "Built from the ground up with secure data routing, auditing, and role-based access controls."
     },
     {
-      title: "Practical AI Adoption",
-      desc: "Focusing on building pragmatic, production-grade AI solutions that solve real business problems, rather than chasing generic industry hype."
+      title: "Scalable Design",
+      desc: "Systems engineered to scale from day one, establishing standard environments that grow with your company."
     },
     {
-      title: "Product Mindset",
-      desc: "Solutions are approached from a product development perspective, balancing long-term engineering rigor with near-term delivery needs."
+      title: "Domain Expertise",
+      desc: "In-depth specialization across legal workflows, healthcare interoperability, fintech, and enterprise engineering."
     },
     {
-      title: "Scalable Solutions",
-      desc: "Engineering and platform standards are built to scale from day one, establishing standardized environments that increase developer productivity."
+      title: "Platform Thinking",
+      desc: "Connecting individual applications into unified, interactive ecosystems rather than creating isolated features."
     },
     {
-      title: "Long-Term Technology Vision",
-      desc: "Helping organizations build durable system foundations and modernization roadmaps that align with business growth and enable agility."
+      title: "Execution Focus",
+      desc: "Prioritizing production stability, latency optimization, and concrete operational returns over market hype."
     }
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-14 bg-white border-b border-border">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          {/* Left Column: Dominant Vision Block */}
           <motion.div
-            className="lg:col-span-4"
+            className="lg:col-span-5 space-y-6"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-primary">Why Organizations Work With Abdul Mannan</h2>
-            <div className="w-20 h-1 bg-primary mb-8"></div>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Organizations work with Abdul Mannan because of the unique combination of enterprise architecture discipline, practical AI strategy, and hands-on product building expertise.
-            </p>
+            <div>
+              <span className="text-xs font-mono font-bold text-accent uppercase tracking-widest px-2 py-0.5 bg-muted border border-border">
+                Strategic Vision
+              </span>
+              <h3 className="text-3xl font-bold text-primary tracking-tight mt-3">
+                Why Organizations Partner With Us
+              </h3>
+              <div className="w-20 h-1 bg-primary mt-4"></div>
+            </div>
+
+            <div className="border-l-4 border-primary pl-8 py-4 space-y-6">
+              <p className="text-lg md:text-xl font-bold text-primary leading-relaxed">
+                "We believe organizations should be able to access knowledge, make decisions, and execute work faster through trustworthy AI systems."
+              </p>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                YnY is building a portfolio of platforms that connect knowledge, intelligence, and execution into a unified enterprise ecosystem.
+              </p>
+            </div>
           </motion.div>
 
+          {/* Right Column: 6 Trust Cards Grid */}
           <motion.div
-            className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6"
+            className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             {cards.map((card, index) => (
-              <div key={index} className="p-8 border border-border bg-white shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="text-lg font-bold text-primary mb-3">{card.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{card.desc}</p>
+              <div 
+                key={index} 
+                className="p-8 border border-border bg-white shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <h4 className="text-sm font-bold text-primary mb-2">
+                    {card.title}
+                  </h4>
+                  <p className="text-[11px] text-muted-foreground leading-relaxed">
+                    {card.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </motion.div>
+
         </div>
       </div>
     </section>
   );
 }
+

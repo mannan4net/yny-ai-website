@@ -40,7 +40,12 @@ export function Navbar() {
             alt="YnY Platforms"
             className="h-10 w-10 object-contain transition-transform group-hover:scale-105"
           />
-          <span className="text-2xl font-bold tracking-tight text-primary">YnY</span>
+          <div className="flex flex-col">
+            <span className="text-2xl font-bold tracking-tight text-primary leading-none">YnY AI</span>
+            <span className="text-[8px] md:text-[9px] font-mono font-bold text-accent uppercase tracking-widest mt-1 opacity-70 whitespace-nowrap">
+              Knowledge • Intelligence • Execution
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}
@@ -57,7 +62,7 @@ export function Navbar() {
             </Link>
           ))}
           <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 py-2 rounded-none">
-            Schedule Consultation
+            Book a Conversation
           </Link>
         </nav>
 
@@ -91,7 +96,7 @@ export function Navbar() {
             className="w-full mt-2 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Schedule Consultation
+            Book a Conversation
           </Link>
         </div>
       )}

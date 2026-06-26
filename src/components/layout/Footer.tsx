@@ -12,7 +12,12 @@ export function Footer() {
               <div className="bg-white flex items-center justify-center rounded-sm overflow-hidden p-1">
                 <img src={logoSrc} alt="YnY Platforms" className="h-8 w-8 object-contain" />
               </div>
-              <span className="text-2xl font-bold tracking-tight text-white">YnY AI</span>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold tracking-tight text-white leading-none">YnY AI</span>
+                <span className="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-widest mt-1 opacity-70 whitespace-nowrap">
+                  Knowledge • Intelligence • Execution
+                </span>
+              </div>
             </div>
             <div className="text-slate-400 text-sm leading-relaxed mb-6">
               <p className="font-semibold text-white">Abdul Mannan</p>
