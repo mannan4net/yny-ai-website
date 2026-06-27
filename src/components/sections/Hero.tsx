@@ -2,12 +2,6 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 
 export function Hero() {
-  const metrics = [
-    { value: "20+", label: "Years Experience" },
-    { value: "Enterprise", label: "Architecture" },
-    { value: "AI & Knowledge", label: "Platforms" },
-    { value: "Government Scale", label: "Systems" },
-  ];
 
   return (
     <section className="relative overflow-hidden bg-white min-h-[75vh] lg:min-h-[85vh] flex items-center pt-24 pb-12 lg:pt-32 lg:pb-16 border-b border-border">
@@ -51,7 +45,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              We build practical AI, legal intelligence, and engineering platforms backed by more than two decades of enterprise architecture experience across government, healthcare, finance, and large-scale digital transformation programs.
+              YnY AI builds practical AI, legal intelligence, and engineering platforms backed by deep enterprise architecture experience across national e-health systems, payment reconciliation platforms, and large-scale digital transformations.
             </motion.p>
             
             <motion.div 
@@ -135,28 +129,6 @@ export function Hero() {
           </motion.div>
           
         </div>
-
-        {/* Credibility metric cards at the bottom */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-10 border-t border-border mt-16"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          {metrics.map((metric, index) => (
-            <div 
-              key={index}
-              className="p-5 border border-border bg-white shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between"
-            >
-              <div className="text-xl md:text-2xl font-bold text-primary mb-2">
-                {metric.value}
-              </div>
-              <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-                {metric.label}
-              </div>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

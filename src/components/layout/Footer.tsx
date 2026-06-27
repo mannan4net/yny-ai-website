@@ -29,17 +29,18 @@ export function Footer() {
           
           <div>
             <h4 className="text-lg font-semibold mb-6">Products</h4>
-            <ul className="space-y-4">
-              <li><Link href="/products" className="text-slate-400 hover:text-white transition-colors text-sm">PAAI</Link></li>
-              <li><Link href="/products" className="text-slate-400 hover:text-white transition-colors text-sm">LegalPA</Link></li>
+            <ul className="space-y-2">
+              <li><Link href="/products?product=paai" className="text-slate-400 hover:text-white transition-colors text-sm">PAAI</Link></li>
+              <li><Link href="/products?product=legalpa" className="text-slate-400 hover:text-white transition-colors text-sm">LegalPA</Link></li>
               <li><a href={AIUNIVERSE_URL} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors text-sm">AIUniverse</a></li>
-              <li><Link href="/products" className="text-slate-400 hover:text-white transition-colors text-sm">SDLC Factory</Link></li>
+              <li><Link href="/products?product=sdlc-factory" className="text-slate-400 hover:text-white transition-colors text-sm">SDLC Factory</Link></li>
+              <li><Link href="/products?product=global-tutor" className="text-slate-400 hover:text-white transition-colors text-sm">Global Tutor</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-lg font-semibold mb-6">Services</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               <li><Link href="/services" className="text-slate-400 hover:text-white transition-colors text-sm">Enterprise Architecture</Link></li>
               <li><Link href="/services" className="text-slate-400 hover:text-white transition-colors text-sm">Cloud Modernization</Link></li>
               <li><Link href="/services" className="text-slate-400 hover:text-white transition-colors text-sm">AI Consulting</Link></li>
@@ -48,18 +49,18 @@ export function Footer() {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6">Industries</h4>
-            <ul className="space-y-4 text-slate-400 text-sm">
-              <li>Healthcare</li>
-              <li>Government</li>
-              <li>Legal</li>
-              <li>Banking & FinTech</li>
+            <h4 className="text-lg font-semibold mb-6">Experience</h4>
+            <ul className="space-y-2 text-slate-400 text-sm">
+              <li>National Registries</li>
+              <li>Payment Systems</li>
+              <li>Inspection Platforms</li>
+              <li>Industrial Software</li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-lg font-semibold mb-6">Company</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               <li><Link href="/about" className="text-slate-400 hover:text-white transition-colors text-sm">About Us</Link></li>
               <li><Link href="/services" className="text-slate-400 hover:text-white transition-colors text-sm">Services</Link></li>
               <li><Link href="/insights" className="text-slate-400 hover:text-white transition-colors text-sm">Insights</Link></li>

@@ -5,32 +5,32 @@ export function ExperienceHighlights() {
     {
       metric: "20+",
       label: "Years Experience",
-      description: "Proven history of architecture design, engineering leadership, and large-scale platform delivery across industries."
+      description: "Proven history of architecture design, engineering leadership, and large-scale platform delivery."
+    },
+    {
+      metric: "National",
+      label: "Platforms",
+      description: "Architectural contributions to national programs including ABDM health registries, Aarogya Setu, bidding engines, and public payment systems."
     },
     {
       metric: "Enterprise",
-      label: "Programs",
+      label: "Transformations",
       description: "Leading multi-year, complex modernization and digital transformation efforts for highly regulated organizations."
     },
     {
-      metric: "Healthcare",
-      label: "Platforms",
-      description: "Direct architect and advisory role on National Health Authority systems, health exchanges, and standard compliance."
-    },
-    {
-      metric: "Cloud",
-      label: "Transformation",
+      metric: "AI & Cloud",
+      label: "Systems",
       description: "Migrating core legacy databases, building resilient cloud-native infrastructures, and streamlining DevOps pipelines."
-    },
-    {
-      metric: "AI",
-      label: "Architecture",
-      description: "Designing semantic retrieval, RAG architectures, knowledge graphs, and secure custom enterprise LLM interfaces."
     },
     {
       metric: "Distributed",
       label: "Systems",
       description: "Engineering fault-tolerant, high-performance backends and microservices that scale securely under massive load."
+    },
+    {
+      metric: "Governed",
+      label: "Architecture",
+      description: "Designing secure systems, access controls, data auditing, and compliance standards built natively."
     }
   ];
 

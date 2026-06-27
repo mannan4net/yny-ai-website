@@ -1,10 +1,41 @@
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
+import { productsData } from "@/data";
 
 export default function Contact() {
+  const params = new URLSearchParams(typeof window !== "undefined" ? window.location.search : "");
+  const productParam = params.get("product");
+
+  const getInitialInquiryType = () => {
+    switch (productParam) {
+      case "paai": return "PAAI (Enterprise Knowledge)";
+      case "legalpa": return "LegalPA (Legal Intelligence)";
+      case "aiuniverse": return "AIUniverse (AI Intelligence)";
+      case "sdlc-factory": return "SDLC Factory (Engineering Execution)";
+      case "global-tutor": return "Global Tutor (Learning Ecosystem)";
+      default: return "General Discussion";
+    }
+  };
+
+  const [inquiryType, setInquiryType] = useState(getInitialInquiryType());
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Dynamically resolve product data when dropdown value changes
+  const getProductFromInquiryType = (type: string) => {
+    switch (type) {
+      case "PAAI (Enterprise Knowledge)": return "paai";
+      case "LegalPA (Legal Intelligence)": return "legalpa";
+      case "AIUniverse (AI Intelligence)": return "aiuniverse";
+      case "SDLC Factory (Engineering Execution)": return "sdlc-factory";
+      case "Global Tutor (Learning Ecosystem)": return "global-tutor";
+      default: return null;
+    }
+  };
+
+  const currentProductId = getProductFromInquiryType(inquiryType);
+  const currentProductData = productsData.find(p => p.id === currentProductId);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -45,7 +76,7 @@ export default function Contact() {
           <div className="container mx-auto px-6">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Contact Us</h1>
             <p className="text-xl text-slate-300 max-w-2xl">
-              Discuss your enterprise requirements with Abdul Mannan and the YnY AI advisory practice.
+              Schedule a conversation with Abdul Mannan to discuss your enterprise platforms and systems integration requirements.
             </p>
           </div>
         </div>
@@ -55,23 +86,48 @@ export default function Contact() {
             {/* Contact Info */}
             <div className="lg:col-span-4 space-y-12">
               <div>
-                <h3 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-4">Location</h3>
-                <p className="text-xl font-medium text-primary">Global / Dubai</p>
+                <h3 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-4">Availability</h3>
+                <p className="text-xl font-medium text-primary leading-tight">Based in Dubai</p>
+                <p className="text-sm font-semibold text-muted-foreground mt-1">Supporting clients globally</p>
               </div>
               
-              
               <div className="pt-12 border-t border-border">
-                <p className="text-muted-foreground">
-                  Abdul Mannan and the YnY AI advisory practice typically respond to all enterprise inquiries within one business day.
-                </p>
+                <h3 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-4">Response Time</h3>
+                <p className="text-sm font-medium text-primary">Replies typically sent within one business day.</p>
               </div>
             </div>
 
             {/* Form */}
             <div className="lg:col-span-8">
               <div className="bg-muted p-8 md:p-12 border border-border">
-                <h2 className="text-2xl font-bold text-primary mb-8">Send an Inquiry</h2>
+                <h2 className="text-2xl font-bold text-primary mb-8">Request a Conversation</h2>
                 
+                {currentProductData && (
+                  <div className="bg-primary/5 border border-primary/10 p-6 mb-8 text-left rounded-none relative overflow-hidden">
+                    {/* Subtle design accents */}
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-primary/[0.02] border-b border-l border-primary/5 rounded-bl-full pointer-events-none" />
+                    
+                    <div className="text-[10px] font-mono font-bold text-accent uppercase tracking-widest mb-1">
+                      Selected Product
+                    </div>
+                    <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 mb-2">
+                      <span className="text-xl font-extrabold text-primary tracking-tight">
+                        {currentProductData.name}
+                      </span>
+                      <span className="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">
+                        {currentProductData.category}
+                      </span>
+                    </div>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      {currentProductData.id === "paai" && "Tell us about your enterprise AI, knowledge, or automation requirements."}
+                      {currentProductData.id === "aiuniverse" && "Tell us how you'd like to use AIUniverse for research, evaluation, or enterprise intelligence."}
+                      {currentProductData.id === "sdlc-factory" && "Tell us about your software delivery or engineering transformation goals."}
+                      {currentProductData.id === "global-tutor" && "Tell us about your learning, tutoring, or institutional requirements."}
+                      {currentProductData.id === "legalpa" && "Tell us about your legal intelligence or compliance requirements."}
+                    </p>
+                  </div>
+                )}
+
                 {isSuccess ? (
                   <div className="bg-success/10 border border-success p-6 text-success font-medium flex flex-col items-center text-center py-16">
                     <svg className="w-12 h-12 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -127,13 +183,18 @@ export default function Contact() {
                         <select 
                           id="inquiryType" 
                           name="inquiryType"
+                          value={inquiryType}
+                          onChange={(e) => setInquiryType(e.target.value)}
                           className="w-full h-12 px-4 bg-white border border-border focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
                         >
-                          <option value="Consulting">Consulting</option>
-                          <option value="Product Demo">Product Demo</option>
-                          <option value="Partnership">Partnership</option>
-                          <option value="Career">Career</option>
-                          <option value="General Inquiry">General Inquiry</option>
+                          <option value="General Discussion">General Discussion</option>
+                          <option value="Enterprise Architecture Strategy">Enterprise Architecture Strategy</option>
+                          <option value="PAAI (Enterprise Knowledge)">PAAI (Enterprise Knowledge)</option>
+                          <option value="LegalPA (Legal Intelligence)">LegalPA (Legal Intelligence)</option>
+                          <option value="AIUniverse (AI Intelligence)">AIUniverse (AI Intelligence)</option>
+                          <option value="SDLC Factory (Engineering Execution)">SDLC Factory (Engineering Execution)</option>
+                          <option value="Global Tutor (Learning Ecosystem)">Global Tutor (Learning Ecosystem)</option>
+                          <option value="General Partnerships">General Partnerships</option>
                         </select>
                       </div>
                     </div>
@@ -155,7 +216,7 @@ export default function Contact() {
                       className="h-14 px-10 bg-primary text-primary-foreground font-bold text-lg hover:bg-primary/90 transition-colors disabled:opacity-70 flex items-center justify-center w-full md:w-auto"
                       data-testid="button-submit-contact"
                     >
-                      {isSubmitting ? "Sending..." : "Send Inquiry"}
+                      {isSubmitting ? "Sending..." : "Request a Conversation"}
                     </button>
                   </form>
                 )}

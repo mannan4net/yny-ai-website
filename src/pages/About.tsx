@@ -21,10 +21,10 @@ export default function About() {
             <h2 className="text-3xl font-bold text-primary mb-8 tracking-tight">Professional Journey</h2>
             <div className="text-lg text-muted-foreground leading-relaxed space-y-6 text-left">
               <p>
-                Abdul Mannan has spent more than two decades designing, modernizing, and scaling complex technology platforms. From leading the architectural design of ABDM (Ayushman Bharat Digital Mission) — India's national health interoperability platform — to directing secure enterprise AI deployments, his career has focused on building durable technology foundations that align with strategic business outcomes.
+                Abdul Mannan is an Enterprise Architect and Technology Leader with over twenty years of experience designing, modernizing, and scaling mission-critical platforms. From leading the architectural design of India’s national health interoperability registry (ABDM) to directing secure enterprise AI transformations, his career is focused on engineering durable systems aligned with strategic business outcomes.
               </p>
               <p>
-                As the founder of YnY AI, he establishes the architectural direction for the venture's services and its portfolio of specialized intelligence products, helping organizations navigate the transition into platform and AI-driven operations.
+                As the founder of YnY AI, he personally architects and leads the YnY AI platform portfolio and engineering services, translating two decades of systems engineering into production-ready software. Founder-led architecture with trusted implementation partners as required.
               </p>
             </div>
           </div>
@@ -36,13 +36,10 @@ export default function About() {
             <h2 className="text-3xl font-bold text-primary mb-8 tracking-tight">Why YnY AI Exists</h2>
             <div className="text-lg text-muted-foreground leading-relaxed space-y-6 text-left">
               <p>
-                YnY AI was created to bridge the gap between deep enterprise experience and the potential of modern AI transformation.
+                YnY AI was founded to translate deep enterprise architecture discipline into practical artificial intelligence.
               </p>
               <p>
-                After more than two decades of architecting national-scale enterprise platforms and directing digital transformation initiatives, Abdul Mannan recognized an opportunity to apply artificial intelligence to critical organizational challenges rather than isolated demonstrations.
-              </p>
-              <p>
-                The mission of YnY AI is to design and build intelligence platforms that enable organizations to unlock the latent value of their information, make better and faster decisions, and establish resilient, future-ready systems.
+                After directing large-scale modernization programs and national registries (ABDM), Abdul Mannan established YnY AI to bridge the gap between speculative AI demonstrations and secure, governed operational assets. YnY AI builds unified platforms that connect institutional knowledge directly to execution, enabling faster, auditable decisions.
               </p>
             </div>
           </div>
@@ -136,7 +133,7 @@ export default function About() {
                 {
                   year: "2026",
                   title: "Founder Vision & Intelligence Platforms",
-                  text: "Formalized YnY AI as a founder-led venture focused on Enterprise Intelligence Systems, AI-powered software delivery platforms, legal intelligence solutions, and next-generation knowledge platforms including PAAI, SDLC Factory, LegalPA, AIUniverse, and future domain-specific intelligence ecosystems."
+                  text: "Formalized YnY AI as a founder-led venture focused on Enterprise Intelligence Systems, AI-powered software delivery platforms, legal intelligence solutions, and next-generation knowledge platforms including PAAI, SDLC Factory, LegalPA, AIUniverse, Global Tutor, and future domain-specific intelligence ecosystems."
                 }
               ].map((milestone, idx) => (
                 <div key={idx} className="flex gap-6 md:gap-8 items-start">
@@ -181,8 +178,8 @@ export default function About() {
                   items: ["DevOps", "Platform Engineering", "CI/CD", "Quality Engineering"]
                 },
                 {
-                  group: "Domain",
-                  items: ["Healthcare IT", "Legal Tech", "FinTech", "Government Digital"]
+                  group: "Payment & Reconciliation",
+                  items: ["Payment & Reconciliation Platforms (ExpertPay)", "Child Support Payment Systems (ExpertPay)", "Clearing & Interbank Settlement", "Transaction Risk Systems"]
                 }
               ].map((cluster, i) => (
                 <div key={i} className="bg-white p-8 border border-border shadow-sm">

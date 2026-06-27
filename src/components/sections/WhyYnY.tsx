@@ -3,28 +3,28 @@ import { motion } from "framer-motion";
 export function WhyYnY() {
   const cards = [
     {
-      title: "Enterprise Experience",
-      desc: "Backed by more than two decades of architecture and system delivery experience across complex organizations."
+      title: "Architectural Oversight",
+      desc: "Founder-led review on every platform deployment, ensuring long-term system stability and compliance."
     },
     {
-      title: "AI With Governance",
-      desc: "Built from the ground up with secure data routing, auditing, and role-based access controls."
+      title: "Zero Vendor Lock-In",
+      desc: "Platforms built on open standards, fully supporting self-hosted deployment and cloud portability."
     },
     {
-      title: "Scalable Design",
-      desc: "Systems engineered to scale from day one, establishing standard environments that grow with your company."
+      title: "Rigorous Compliance",
+      desc: "Architected to align natively with GDPR, HIPAA, and Indian data sovereignty regulations."
     },
     {
-      title: "Domain Expertise",
-      desc: "In-depth specialization across legal workflows, healthcare interoperability, fintech, and enterprise engineering."
+      title: "Integration Native",
+      desc: "Engineered to connect directly to your existing cloud configurations and relational database schemas."
     },
     {
-      title: "Platform Thinking",
-      desc: "Connecting individual applications into unified, interactive ecosystems rather than creating isolated features."
+      title: "Outcome Driven",
+      desc: "System deployments evaluated and prioritized based on measurable business-value metrics."
     },
     {
-      title: "Execution Focus",
-      desc: "Prioritizing production stability, latency optimization, and concrete operational returns over market hype."
+      title: "Platform Modernization",
+      desc: "Continuous software updates tracking the latest developments in AI and platform engineering research."
     }
   ];
 

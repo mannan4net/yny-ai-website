@@ -4,17 +4,17 @@ export const productsData = [
   {
     id: 'paai',
     name: 'PAAI',
-    tagline: 'The Enterprise Personal AI for Organizations — One intelligent interface connecting people, AI agents, modern applications, legacy enterprise systems, organizational knowledge, and executive decision-making.',
-    category: 'Enterprise Intelligence Operating System',
-    businessProblem: 'Modern organizations operate across dozens of disconnected systems including collaboration platforms, business applications, enterprise databases, knowledge repositories, cloud services, legacy applications, and AI tools. Information remains fragmented across the organization, making it difficult for employees and executives to obtain complete context, monitor priorities, and make timely decisions. Traditional AI assistants remain disconnected from enterprise knowledge, business processes, and operational systems.',
-    solution: 'PAAI creates a unified Enterprise Intelligence Operating System that connects modern SaaS applications, enterprise platforms, knowledge repositories, databases, AI agents, and legacy systems into a single intelligent experience. Using MCP connectivity for modern platforms and enterprise integration gateways for legacy environments, PAAI creates a contextual intelligence layer across the organization. A layered architecture built on RBAC security, RAG knowledge retrieval, semantic search, workflow orchestration, enterprise memory, and AI agents enables users to interact with enterprise knowledge through voice, chat, Teams, WhatsApp Business, email, or web experiences. Rather than waiting for users to search for information, PAAI continuously gathers context, identifies important events, and delivers actionable intelligence. As a flagship feature, the Morning Executive Intelligence Brief orchestrates information collection across connected enterprise systems, analyzes activities, identifies priorities, risks, deadlines, opportunities, and operational changes every morning, then delivers personalized briefings via Teams, WhatsApp Business, email, voice, or web channels as a single intelligence source for executive decision-making.',
+    tagline: 'The Enterprise Knowledge Operating System — connecting legacy platforms and database records into a single intelligent memory.',
+    category: 'Enterprise Knowledge',
+    businessProblem: 'Modern organizations operate across dozens of disconnected collaboration platforms, legacy applications, and databases. Information remains fragmented, making it difficult for teams and executives to obtain complete context, monitor priorities, and make timely decisions.',
+    solution: 'PAAI establishes a unified Enterprise Knowledge Operating System. By connecting SaaS platforms, legacy databases, and custom workflows into a single contextual memory layer, PAAI enables secure, cross-system retrieval governed by your company’s access controls (RBAC).\n\nInstead of waiting for manual searches, PAAI continuously monitors activities to deliver proactive intelligence. Its flagship feature, the Morning Executive Intelligence Brief, orchestrates data collection across all systems every morning, delivering a personalized summary of priorities, deadlines, and operational risks directly to your email, Teams, or WhatsApp.',
     architectureHighlights: [
       'MCP Connectivity Framework',
-      'Enterprise Integration Gateway Support',
-      'Multi-Agent Orchestration Architecture',
+      'Enterprise Gateway Support',
+      'Multi-Agent Orchestration',
       'Enterprise RBAC Security Model',
-      'RAG and Semantic Retrieval Layer',
-      'Unified Enterprise Intelligence Graph'
+      'RAG & Semantic Retrieval Layer',
+      'Unified Knowledge Graph'
     ],
     deploymentModel: 'Cloud-hosted SaaS with on-premise and private cloud options',
     capabilities: [
@@ -40,9 +40,9 @@ export const productsData = [
     id: 'legalpa',
     name: 'LegalPA',
     tagline: 'Constitution to courtroom — all laws in one place',
-    category: 'Legal Intelligence Platform',
-    businessProblem: "Legal professionals waste enormous time navigating India's fragmented legal framework. Statutes, regulations, and case law are spread across dozens of disconnected sources, leading to inefficient research and increased risk of missing critical precedents.",
-    solution: 'LegalPA provides a unified AI-powered legal intelligence platform covering the full legal corpus. It enables instant research, rigorous compliance checks, and comprehensive case analysis by connecting statutes to relevant precedents automatically.',
+    category: 'Legal Intelligence',
+    businessProblem: "Legal professionals waste critical time navigating India's highly fragmented legal codes. Statutes, central/state regulations, and active case law are spread across dozens of disconnected sources, increasing the risk of missing binding precedents and legislative amendments.",
+    solution: 'LegalPA unifies the entire Indian legal corpus into a single, semantic search engine. By automatically building a citation network that maps statutory codes directly to judicial precedents, LegalPA enables law firms and compliance teams to conduct instant research, verify procedural filings, and receive real-time alerts on regulatory changes.',
     architectureHighlights: [
       'Specialized legal ontology and entity recognition',
       'Real-time synchronization with legislative databases',
@@ -63,10 +63,10 @@ export const productsData = [
   {
     id: 'aiuniverse',
     name: 'AIUniverse',
-    tagline: "Stay informed on what's happening in AI",
-    category: 'AI Market Intelligence',
-    businessProblem: 'The AI landscape evolves faster than any individual or team can track. Critical research breakthroughs, tool releases, and market shifts are either missed entirely or buried in noise, leading to strategic blind spots.',
-    solution: 'AIUniverse delivers curated intelligence on AI developments, pivotal research, and significant industry shifts. It provides daily briefings tailored to your specific domain so you stay ahead of the curve without the overhead of filtering through the noise.',
+    tagline: 'Strategic AI intelligence and platform research for technology leaders.',
+    category: 'AI Intelligence',
+    businessProblem: 'The AI landscape evolves faster than enterprise teams can track. Critical research breakthroughs, tool releases, and platform shifts are easily missed, resulting in strategic blind spots and misaligned technology investments.',
+    solution: 'AIUniverse automates the tracking of global machine learning breakthroughs and vendor releases. By summarizing research papers, parsing platform capabilities, and delivering daily briefings, it helps technology leaders make informed architecture decisions without research overhead.',
     architectureHighlights: [
       'Automated ingestion of global AI research and news',
       'LLM-driven summarization and relevance scoring',
@@ -88,10 +88,10 @@ export const productsData = [
   {
     id: 'sdlc-factory',
     name: 'SDLC Factory',
-    tagline: 'The Inception Engine for Software Creation — From business intent to architecture to deployment — software that builds software.',
-    category: 'AI-Powered Enterprise Software Delivery Platform',
-    businessProblem: 'Software initiatives frequently fail because requirements are incomplete, architecture is inconsistent, governance is fragmented, and delivery assets are manually created across disconnected tools. Organizations struggle to maintain traceability between business objectives, engineering execution, architecture decisions, quality controls, and deployment outcomes.',
-    solution: 'SDLC Factory transforms business intent into governed software delivery assets. The platform establishes a structured software factory model that converts ideas, requirements, and business objectives into architecture blueprints, data models, BPMN workflows, user stories, QA assets, deployment specifications, governance artifacts, and reusable domain knowledge. Each layer builds upon the previous layer, creating a traceable software delivery chain from concept to production. Unlike traditional code generation tools, SDLC Factory creates the engineering layers that generate software, enabling organizations to industrialize software delivery while preserving governance, quality, and architectural consistency.',
+    tagline: 'From business intent to architecture to code — automating governed software delivery assets.',
+    category: 'Engineering Execution',
+    businessProblem: 'Software initiatives frequently fail due to incomplete requirements, inconsistent system architectures, and manual creation of delivery assets. Organizations struggle to maintain traceability between initial business intent, system designs, and final deployment outcomes.',
+    solution: 'SDLC Factory establishes a structured software factory model that translates business requirements directly into architecture blueprints, data models, and user stories. Each asset is traceably linked, creating a continuous, audited chain from concept to production code.\n\nUnlike basic code generators, SDLC Factory structures the entire engineering environment and deployment specification layer. This enables engineering teams to accelerate software delivery while maintaining strict compliance, quality, and architectural consistency.',
     architectureHighlights: [
       'AI-assisted code and architecture generation',
       'Automated CI/CD pipeline instantiation',
@@ -117,7 +117,35 @@ export const productsData = [
       'Faster project onboarding'
     ],
     targetCustomers: 'Engineering teams, CTOs, product companies, digital transformation programs',
-    cta: 'Consult Now',
+    cta: 'Book a Conversation',
+  },
+  {
+    id: 'global-tutor',
+    name: 'Global Tutor',
+    tagline: 'AI-powered learning, tutoring, assessment, and skill development platform.',
+    category: 'Learning Ecosystem',
+    businessProblem: 'Learning remains fragmented across academic institutions, independent educators, organizations, and digital platforms. Learners struggle to discover trusted expertise, while educators lack intelligent tools to deliver personalized, measurable learning experiences at scale.',
+    solution: 'Global Tutor establishes an AI-native learning ecosystem that connects learners, educators, institutions, learning resources, and assessments into a unified intelligent platform. It combines tutoring, adaptive learning, AI assistance, assessments, collaboration, and structured learning pathways to personalize education, accelerate skill development, and support lifelong learning across academic, professional, and organizational environments.',
+    architectureHighlights: [
+      'Interoperable learning ontology and skill mapping',
+      'Intelligent tutoring agent and automated assessment grading',
+      'Real-time performance metrics and predictive analytics'
+    ],
+    deploymentModel: 'Cloud-native multi-tenant learning platform with institution and enterprise deployment options.',
+    capabilities: [
+      'Tutoring and Live Session Orchestration',
+      'Automated Assessment & Skill Validation',
+      'Adaptive Learning and AI Study Assistance',
+      'Multi-Tenant Institution and Class Management',
+      'Curriculum & Learning Pathway Management'
+    ],
+    benefits: [
+      'Accelerate skill acquisition at scale',
+      'Support consistent learning journeys across institutions and organizations.',
+      'Deliver measurable, personalized education'
+    ],
+    targetCustomers: 'Educational Institutions, Independent Educators, Professional Training Organizations, Corporate Learning & Development, Government Training Programs',
+    cta: 'Book a Conversation',
   },
 ];
 
@@ -126,7 +154,7 @@ export const teamData = [
     name: 'Abdul Mannan',
     title: 'Founder & Chief Architect',
     initials: 'AM',
-    bio: "Enterprise Architect and Technology Leader with more than two decades of experience across enterprise systems, cloud transformation, platform engineering, data ecosystems, DevOps modernization, AI adoption and large-scale digital transformation initiatives. Worked across government, healthcare, fintech, enterprise software and modernization programs involving large-scale platforms and mission-critical systems.",
+    bio: "Founder & Chief Architect of YnY AI. Personally leads the system design and product development of YnY AI's platforms, including PAAI, LegalPA, AIUniverse, SDLC Factory, and Global Tutor. Backed by twenty years of delivering national-scale health exchanges (ABDM), payment reconciliation platforms (ExpertPay), and enterprise platform transformations. Founder-led architecture with trusted implementation partners as required.",
   },
 ];
 
@@ -171,61 +199,33 @@ export const industriesData = [
 
 export const servicesData = [
   {
-    title: 'Enterprise Architecture Advisory',
-    description: 'Strategic guidance, target state architectures, technology blueprints, and modernization roadmaps.',
-    challenges: 'Enterprises struggle with fragmented systems, mounting technical debt, and poorly aligned technology investments. Without a cohesive architecture, scaling becomes brittle and transformation initiatives stall.',
-    approach: 'Structured architectural assessments identify systemic risks and constraints. Durable, target architectures are designed to map directly to business objectives.',
-    outcomes: ['Clear modernization roadmap', 'Reduced architectural technical debt', 'Agile and scalable system foundations']
+    title: 'Enterprise Architecture Strategy',
+    description: 'Blueprints, assessments, and technology roadmaps aligning IT infrastructure with corporate business scale.',
+    challenges: 'Organizations struggle with legacy platform fragmentation, technical debt, and misaligned IT investments that stall delivery.',
+    approach: 'We conduct rigorous systems reviews and design target-state blueprints to establish durable architectural foundations.',
+    outcomes: ['System Modernization Roadmaps', 'Architectural Health Reviews', 'Technical Risk Registers']
   },
   {
-    title: 'AI Strategy & Adoption',
-    description: 'Pragmatic enterprise AI roadmaps, secure RAG systems, and responsible AI governance.',
-    challenges: 'Business leaders face overwhelming noise surrounding AI capabilities, struggling to move beyond proofs of concept. Security, data privacy, and ROI measurement remain significant barriers to enterprise adoption.',
-    approach: 'High-value, pragmatic AI use cases are identified and grounded in existing data architecture. Responsible AI governance frameworks are established to ensure secure implementations.',
-    outcomes: ['Prioritized AI investment roadmap', 'Secure data governance model', 'Measurable business ROI from AI initiatives']
+    title: 'AI Engineering & RAG Integration',
+    description: 'Secure enterprise AI roadmaps, vector retrieval structures (RAG), and data governance frameworks.',
+    challenges: 'AI initiatives fail to move beyond prototypes when built on unstructured data without access controls or compliance audit logs.',
+    approach: 'We engineer custom LLM sandboxes, retrieval-augmented databases, and security compliance checkpoints.',
+    outcomes: ['Secure RAG System Deployments', 'LLM Access Governance Frameworks', 'Context Curation Roadmaps']
   },
   {
-    title: 'Cloud Modernization',
-    description: 'Cloud-native transformations, application refactoring, and cost-optimized infrastructure strategy.',
-    challenges: 'Organizations migrating to the cloud often replicate legacy inefficiencies. Lift-and-shift approaches fail to capture true cloud agility, leading to uncontrolled costs and operational complexity.',
-    approach: 'Cloud-native environments are designed for resilience and elasticity. Migration strategies prioritize application refactoring and infrastructure optimization for long-term sustainability.',
-    outcomes: ['Optimized cloud expenditure', 'High-availability infrastructure', 'Accelerated deployment velocity']
+    title: 'Cloud Modernization & Platform Engineering',
+    description: 'Transitioning systems to secure, cloud-native environments and automating developer infrastructure pipelines.',
+    challenges: 'On-premise infrastructure is rigid and database configurations bottleneck developers, slowing software delivery velocity.',
+    approach: 'We refactor legacy databases, establish developer self-service portals, and build automated deployment pipelines.',
+    outcomes: ['Cloud-Native Database Schema Designs', 'CI/CD Pipeline Automations', 'Observability & Alerting Configurations']
   },
   {
-    title: 'Platform Engineering',
-    description: 'Internal developer platforms, self-service infrastructure, and developer experience optimization.',
-    challenges: 'Developers lose significant time configuring environments and managing infrastructure instead of writing code. Cognitive load increases as deployment pipelines grow complex.',
-    approach: 'Internal developer platforms abstract away infrastructure complexities. Self-service tooling and infrastructure-as-code are implemented to standardize and accelerate the developer experience.',
-    outcomes: ['Reduced developer cognitive load', 'Standardized deployment environments', 'Increased overall engineering velocity']
-  },
-  {
-    title: 'Technology Due Diligence',
-    description: 'Comprehensive technical assessments, software architecture reviews, and scalability analysis.',
-    challenges: 'Investors and organizations frequently face hidden technical risks, structural code issues, or unscalable architectures during acquisitions or scaling phases.',
-    approach: 'Deep-dive technical due diligence is performed, evaluating system reliability, technology stacks, security postures, and engineering team capabilities.',
-    outcomes: ['Detailed technical risk register', 'Scalability and modernization roadmap', 'Objective architecture health report']
-  },
-  {
-    title: 'Digital Transformation Consulting',
-    description: 'End-to-end modernization strategy, delivery governance, and alignment of technology with business outcomes.',
-    challenges: 'Modernization programs frequently fail due to a lack of alignment between engineering practices, target architectures, and business objectives.',
-    approach: 'Expert partnerships guide complex technology transformations, establishing robust delivery governance and engineering discipline.',
-    outcomes: ['Clear alignment of technology to business value', 'Standardized engineering practices', 'Predictable delivery outcomes']
-  },
-  {
-    title: 'Knowledge Platforms',
-    description: 'RAG systems, semantic search, enterprise knowledge management, PAAI deployment.',
-    challenges: 'Critical institutional knowledge is trapped in unstructured formats and siloed document repositories. Employees spend hours searching for information, leading to duplicated effort and poor decision-making.',
-    approach: 'Production-grade RAG (Retrieval-Augmented Generation) architectures and semantic search capabilities are deployed. Secure knowledge systems surface contextual information instantly.',
-    outcomes: ['Instant, context-aware information retrieval', 'Secure, role-based access to knowledge', 'Elimination of organizational data silos']
-  },
-  {
-    title: 'Data & Analytics Systems',
-    description: 'Modern data architecture, analytics pipelines, and secure data exchange frameworks.',
-    challenges: 'Data is often disjointed, poorly governed, and difficult to analyze effectively. Organizations struggle to turn massive volumes of raw data into reliable, actionable business insights.',
-    approach: 'Scalable data architectures are designed and comprehensive governance policies are established. Modern analytics platforms provide a single, trustworthy source of truth.',
-    outcomes: ['Unified enterprise data architectures', 'Reliable, real-time business intelligence', 'Strong data governance and compliance']
-  },
+    title: 'Information Architecture & Systems Auditing',
+    description: 'High-volume database design, streaming data pipelines, and technical code audits for M&A.',
+    challenges: 'Ingesting transactional data at scale is complex, while M&A activity carries high technical debt and security risks.',
+    approach: 'We design high-throughput data schemas and conduct deep codebase reviews to evaluate technology risks.',
+    outcomes: ['Technical Debt Audits', 'Distributed Data Pipeline Schemas', 'Real-Time Dashboard Blueprints']
+  }
 ];
 
 export const engagementModelsData = [
@@ -259,55 +259,55 @@ export const insightsData = [
   {
     category: 'Artificial Intelligence',
     title: 'Why Most Enterprise AI Initiatives Fail',
-    excerpt: 'An analysis of the common pitfalls in enterprise AI adoption. Moving past proofs of concept requires architectural integration, clear data governance, and aligning AI capabilities with measurable business outcomes rather than pursuing generic hype.',
+    excerpt: 'An analysis of critical bottlenecks in B2B AI adoption. Moving past sandboxed proofs of concept requires aligning LLM capabilities directly with operational compliance and business-value metrics.',
     link: '#'
   },
   {
     category: 'Enterprise Intelligence',
     title: 'Building an Enterprise Personal AI',
-    excerpt: 'How to architect secure, personalized AI agents that leverage unstructured enterprise knowledge. Learn the patterns for integrating context-aware assistants into daily professional workflows while maintaining data boundaries.',
+    excerpt: 'Architectural blueprints for deploying custom assistants that securely query internal company data, establishing strict user access boundaries within daily communication channels.',
     link: '#'
   },
   {
     category: 'Digital Transformation',
     title: 'Lessons from National-Scale Digital Platforms',
-    excerpt: 'Key architectural takeaways from designing and deploying national-scale health and e-governance interoperability networks. Discover how to manage complex stakeholder integration, data standards, and extreme scale.',
+    excerpt: 'Key architectural takeaways from designing national health interoperability registries. Learn to manage federated database standards, multi-agency consensus, and high-volume traffic nodes.',
     link: '#'
   },
   {
     category: 'Software Engineering',
     title: 'The Future of AI-Powered Software Delivery',
-    excerpt: 'How generative AI is reshaping the software development lifecycle. We explore a governed framework that translates business requirements directly into architecture models, QA artifacts, and deployment blueprints.',
+    excerpt: 'How automated lifecycle pipelines translate product intent directly into governed code. We explore the transition from manual asset creation to model-driven software generation.',
     link: '#'
   },
   {
     category: 'Enterprise Architecture',
     title: 'Enterprise Architecture in the Age of AI',
-    excerpt: 'Why artificial intelligence must be treated as a core architectural capability. Learn how to design system foundations that accommodate rapid model evolution without accumulating technical debt.',
+    excerpt: 'Treating AI as a foundational infrastructure layer rather than an add-on. Learn to structure data schemas and API pipelines to accommodate rapid model updates without core code debt.',
     link: '#'
   },
   {
     category: 'Technology Integration',
     title: 'MCP, Integration Platforms and Enterprise Intelligence',
-    excerpt: 'Bridging the gap between modern AI-native connectivity and legacy systems. A deep dive into combining the Model Context Protocol (MCP) with enterprise integration gateways for secure, unified data access.',
+    excerpt: 'A deep dive into combining Model Context Protocol (MCP) with legacy enterprise gateways, establishing secure bidirectional data flow for LLM tool calling.',
     link: '#'
   },
   {
     category: 'Regulatory Technology',
     title: 'Designing AI Systems for Regulated Industries',
-    excerpt: 'A blueprint for implementing enterprise AI in healthcare, finance, and government. We examine chunk-level role-based access control (RBAC), strict security boundaries, and audit trails needed for compliance.',
+    excerpt: 'Implementing RAG within highly audited environments. We examine chunk-level access control, data encryption in transit, and immutable audit logs required for sector compliance.',
     link: '#'
   },
   {
     category: 'Executive Decisions',
     title: 'Turning Enterprise Data into Executive Intelligence',
-    excerpt: 'How to orchestrate context across siloed databases, SaaS applications, and legacy systems. Learn how to transform raw enterprise events into daily briefings and actionable intelligence for decision-makers.',
+    excerpt: 'Orchestrating disparate transactional events into clean contextual memory. We map the pipeline that compiles activity logs into structured briefings for executive decision-making.',
     link: '#'
   },
   {
     category: 'Enterprise Transformation',
     title: 'From Legacy Systems to AI-Native Enterprises',
-    excerpt: 'A strategic roadmap for transitioning legacy IT environments into AI-native infrastructures. We discuss integration gateways, Model Context Protocol (MCP) implementations, and the path to incremental modernization.',
+    excerpt: 'A migration roadmap for legacy IT infrastructure. Learn how to wrap monolithic core databases in secure API layers to support incremental platform modernization.',
     link: '#'
   }
 ];

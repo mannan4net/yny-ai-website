@@ -1,9 +1,25 @@
+import { useState, useEffect } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { productsData } from "@/data";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Server, ShieldCheck, CheckCircle2 } from "lucide-react";
 
 export default function Products() {
+  const [location] = useLocation();
+  const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
+
+  // Sync state whenever the route location changes
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setSelectedProduct(params.get("product"));
+  }, [location]);
+
+  const isValidProduct = selectedProduct && productsData.some(p => p.id === selectedProduct);
+  
+  const filteredProducts = isValidProduct
+    ? productsData.filter(p => p.id === selectedProduct)
+    : productsData;
+
   return (
     <Layout>
       <div className="bg-white pb-24 border-b border-border">
@@ -16,9 +32,21 @@ export default function Products() {
           </div>
         </div>
 
+        {isValidProduct && (
+          <div className="container mx-auto px-6 mb-8">
+            <Link 
+              href="/products"
+              onClick={() => setSelectedProduct(null)}
+              className="inline-flex items-center text-sm font-bold text-accent hover:underline gap-2"
+            >
+              <span>← View All Products</span>
+            </Link>
+          </div>
+        )}
+
         <div className="container mx-auto px-6">
           <div className="space-y-32">
-            {productsData.map((product, index) => (
+            {filteredProducts.map((product, index) => (
               <div key={product.id} className="flex flex-col lg:flex-row gap-16 items-start">
                 <div className="flex-1 w-full space-y-8">
                   <div>
@@ -59,7 +87,7 @@ export default function Products() {
                     </a>
                   ) : (
                     <Link 
-                      href="/contact"
+                      href={`/contact?product=${product.id}&source=products`}
                       className="inline-flex items-center justify-center h-14 px-10 bg-primary text-white font-bold text-base hover:bg-primary/90 transition-colors shadow-sm"
                     >
                       {product.cta}

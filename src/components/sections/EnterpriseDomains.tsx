@@ -38,7 +38,7 @@ export function EnterpriseDomains() {
             Focus Areas
           </h2>
           <h3 className="text-3xl font-bold text-primary tracking-tight">
-            Enterprise Domains We Serve
+            Enterprise Domains & Solutions
           </h3>
           <div className="w-20 h-1 bg-primary mt-4"></div>
         </motion.div>

@@ -6,22 +6,22 @@ export function Approach() {
     {
       icon: Layers,
       title: "Architecture First",
-      description: "AI must sit on strong structural foundations. We prioritize high-availability schemas, structured data mapping, and standard integration topologies over hasty feature generation."
+      description: "AI must sit on strong structural foundations. The engineering approach prioritizes high-availability schemas, structured data mapping, and standard integration topologies over hasty feature generation."
     },
     {
       icon: BookOpen,
       title: "Knowledge Before Automation",
-      description: "Bad knowledge produces bad AI. We build systems that focus on curating, refining, and indexing clean corporate context before deploying generative automation agents."
+      description: "Bad knowledge produces bad AI. Systems are engineered to curate, refine, and index clean corporate context before deploying generative automation agents."
     },
     {
       icon: ShieldCheck,
       title: "Governance By Design",
-      description: "Security and access control are built directly into our systems from day one. Data routing, user credentials, and auditing checkpoints are engineered natively, not bolted on."
+      description: "Security and access control are built directly into YnY AI platforms from day one. Data routing, user credentials, and auditing checkpoints are engineered natively, not bolted on."
     },
     {
       icon: Cpu,
       title: "Practical Innovation",
-      description: "We focus on solving real operational problems with tangible outcomes. We prioritize production-grade reliability and low latency over marketing buzzwords and hypothetical use cases."
+      description: "Engineering focus is centered on solving real operational problems with tangible outcomes. Production-grade reliability and low latency are prioritized over marketing buzzwords and speculative use cases."
     }
   ];
 
@@ -36,10 +36,10 @@ export function Approach() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-3">
-            Our Principles
+            Core Principles
           </h2>
           <h3 className="text-3xl font-bold text-primary tracking-tight">
-            How We Think
+            Engineering Philosophy
           </h3>
           <div className="w-20 h-1 bg-primary mt-4"></div>
         </motion.div>

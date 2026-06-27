@@ -9,20 +9,22 @@ export function FounderCredibility() {
   const [imageError, setImageError] = useState(false);
 
   const experiences = [
-    "National-scale healthcare systems",
-    "Enterprise transformation programs",
-    "Cloud modernization initiatives",
-    "Data and analytics platforms",
-    "AI and knowledge systems"
+    "National digital health & e-governance platforms (ABDM)",
+    "Payment and reconciliation engines (ExpertPay)",
+    "Industrial paint and service web applications (AkzoNobel)",
+    "Government-approved bidding & auction engines (C1 India)",
+    "Enterprise inspection & laboratory management (Bureau Veritas)",
+    "Manufacturing and consumer electronics platforms (Dyson)",
+    "High-throughput enterprise data warehousing"
   ];
 
   const trustIndicators = [
-    "20+ Years Experience",
-    "Enterprise Architecture",
-    "National Scale Systems",
-    "AI Platforms",
-    "Cloud Transformation",
-    "Distributed Systems"
+    "Systems Integration",
+    "Platform Engineering",
+    "Data Sovereignty",
+    "Knowledge Graphs",
+    "Federated Security",
+    "Scale Governance"
   ];
 
   return (
@@ -50,10 +52,10 @@ export function FounderCredibility() {
 
             <div className="space-y-4">
               <p className="text-lg font-bold text-primary leading-snug">
-                YnY is not an AI experiment.
+                Practical software led by architectural discipline.
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Our products are built by enterprise architects, solution designers, and engineering leaders who have spent decades designing and delivering mission-critical platforms.
+                YnY platforms are architected and led by founder Abdul Mannan, translating over two decades of systems engineering into production-ready software. Founder-led architecture with trusted implementation partners as required.
               </p>
             </div>
 
@@ -69,7 +71,7 @@ export function FounderCredibility() {
 
             <div className="space-y-4">
               <h4 className="text-sm font-bold text-primary uppercase tracking-wider">
-                Our architecture experience spans:
+                Representative platform and architectural experience:
               </h4>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-6">
                 {experiences.map((exp, i) => (
