@@ -1,3 +1,5 @@
+import { AIUNIVERSE_URL } from "@/config/constants";
+
 export const productsData = [
   {
     id: 'paai',
@@ -80,7 +82,8 @@ export const productsData = [
     ],
     benefits: ['Stay ahead of AI trends', 'Reduce research overhead', 'Make better technology decisions', 'Competitive intelligence'],
     targetCustomers: 'Technology leaders, AI teams, innovation managers, CTOs, product managers',
-    cta: 'Start Free Trial',
+    cta: 'Launch AIUniverse',
+    externalLink: AIUNIVERSE_URL,
   },
   {
     id: 'sdlc-factory',

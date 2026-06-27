@@ -48,12 +48,23 @@ export default function Products() {
                     <p className="text-sm font-medium text-muted-foreground">{product.deploymentModel}</p>
                   </div>
                   
-                  <Link 
-                    href="/contact"
-                    className="inline-flex items-center justify-center h-14 px-10 bg-primary text-white font-bold text-base hover:bg-primary/90 transition-colors shadow-sm"
-                  >
-                    {product.cta}
-                  </Link>
+                  {product.externalLink ? (
+                    <a
+                      href={product.externalLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center h-14 px-10 bg-primary text-white font-bold text-base hover:bg-primary/90 transition-colors shadow-sm"
+                    >
+                      {product.cta}
+                    </a>
+                  ) : (
+                    <Link 
+                      href="/contact"
+                      className="inline-flex items-center justify-center h-14 px-10 bg-primary text-white font-bold text-base hover:bg-primary/90 transition-colors shadow-sm"
+                    >
+                      {product.cta}
+                    </Link>
+                  )}
                 </div>
                 
                 <div className="flex-1 w-full bg-white p-8 md:p-10 border border-border shadow-lg shadow-slate-100">

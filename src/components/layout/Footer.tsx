@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { AIUNIVERSE_URL } from "@/config/constants";
 import { Linkedin } from "lucide-react";
 import logoSrc from "/yny-logo.png";
 
@@ -31,7 +32,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li><Link href="/products" className="text-slate-400 hover:text-white transition-colors text-sm">PAAI</Link></li>
               <li><Link href="/products" className="text-slate-400 hover:text-white transition-colors text-sm">LegalPA</Link></li>
-              <li><Link href="/products" className="text-slate-400 hover:text-white transition-colors text-sm">AIUniverse</Link></li>
+              <li><a href={AIUNIVERSE_URL} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors text-sm">AIUniverse</a></li>
               <li><Link href="/products" className="text-slate-400 hover:text-white transition-colors text-sm">SDLC Factory</Link></li>
             </ul>
           </div>

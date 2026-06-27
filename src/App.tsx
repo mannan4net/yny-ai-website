@@ -9,7 +9,6 @@ import About from "@/pages/About";
 import Services from "@/pages/Services";
 import Insights from "@/pages/Insights";
 import Contact from "@/pages/Contact";
-
 const queryClient = new QueryClient();
 
 function Router() {
