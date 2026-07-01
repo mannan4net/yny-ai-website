@@ -1,6 +1,7 @@
 import React, { ReactNode, useState } from "react";
 import { ArrowRight, CheckCircle2, Layers } from "lucide-react";
 import { Link } from "wouter";
+import { ArchitectureImage } from "./ArchitectureImage";
 
 // --- Hero ---
 export function PlatformHero({ category, title, description }: { category: string; title: string; description: string }) {
@@ -12,7 +13,7 @@ export function PlatformHero({ category, title, description }: { category: strin
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-6">
         {title}
       </h1>
-      <p className="text-xl text-muted-foreground max-w-3xl leading-relaxed">
+      <p className="text-xl text-muted-foreground leading-relaxed">
         {description}
       </p>
     </div>
@@ -56,11 +57,11 @@ export function PlatformArchitecture({ executiveImage, technicalImage, descripti
       </div>
       <div className="p-6 md:p-8">
         <p className="text-muted-foreground mb-8 text-lg">{description}</p>
-        <div className="rounded-lg border border-border bg-white p-4 shadow-sm flex justify-center items-center overflow-hidden">
+        <div className="overflow-hidden">
           {activeTab === "executive" ? (
-            <img src={executiveImage} alt="Executive Architecture" className="w-full h-auto object-contain rounded" />
+            <ArchitectureImage src={executiveImage} alt="Executive Architecture" />
           ) : (
-            <img src={technicalImage} alt="Technical Architecture" className="w-full h-auto object-contain rounded" />
+            <ArchitectureImage src={technicalImage} alt="Technical Architecture" />
           )}
         </div>
       </div>

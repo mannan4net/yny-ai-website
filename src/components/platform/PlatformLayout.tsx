@@ -1,6 +1,14 @@
-import React, { ReactNode, useState, useEffect, useRef } from "react";
+import React, { ReactNode, useState, useEffect } from "react";
 import { Link } from "wouter";
-import { ArrowLeft } from "lucide-react";
+import { 
+  ArrowLeft, 
+  Home, 
+  TrendingUp, 
+  Grid3X3, 
+  Network, 
+  Briefcase, 
+  Route 
+} from "lucide-react";
 
 interface PlatformLayoutProps {
   children: ReactNode;
@@ -10,12 +18,12 @@ interface PlatformLayoutProps {
 
 export function PlatformLayout({ children, breadcrumb = "All Products", breadcrumbHref = "/products" }: PlatformLayoutProps) {
   const sections = [
-    { id: "overview", label: "Overview" },
-    { id: "business-value", label: "Business Value" },
-    { id: "capabilities", label: "Capabilities" },
-    { id: "architecture", label: "Architecture" },
-    { id: "use-cases", label: "Use Cases" },
-    { id: "roadmap", label: "Roadmap" }
+    { id: "overview", label: "Overview", icon: Home },
+    { id: "business-value", label: "Business Value", icon: TrendingUp },
+    { id: "capabilities", label: "Capabilities", icon: Grid3X3 },
+    { id: "architecture", label: "Architecture", icon: Network },
+    { id: "use-cases", label: "Use Cases", icon: Briefcase },
+    { id: "roadmap", label: "Roadmap", icon: Route }
   ];
 
   const [activeSection, setActiveSection] = useState("overview");
@@ -43,7 +51,7 @@ export function PlatformLayout({ children, breadcrumb = "All Products", breadcru
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const headerOffset = 80;
+      const headerOffset = 100; // Adjusted offset for single header
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
   
@@ -56,68 +64,76 @@ export function PlatformLayout({ children, breadcrumb = "All Products", breadcru
 
   return (
     <div className="bg-white min-h-screen pt-20">
-      {/* Platform Sub-navigation */}
-      <div className="border-b border-border bg-slate-50 sticky top-20 z-40 hidden md:block">
-        <div className="container mx-auto px-6 h-12 flex items-center justify-between">
-          <Link href={breadcrumbHref} className="text-sm font-medium text-muted-foreground hover:text-primary flex items-center gap-2">
-            <ArrowLeft size={16} />
-            Back to {breadcrumb}
-          </Link>
-          <div className="flex space-x-8">
-            {sections.map((s) => (
-              <button
-                key={s.id}
-                onClick={() => scrollToSection(s.id)}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  activeSection === s.id ? "text-primary border-b-2 border-primary h-12" : "text-muted-foreground"
-                }`}
-              >
-                {s.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Main Content Area */}
-      <div className="container mx-auto px-6 py-12 lg:py-16">
+      <div className="container mx-auto px-6 pt-4 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
           {/* Mobile Table of Contents (Sticky) */}
-          <div className="lg:hidden sticky top-20 z-30 bg-white/90 backdrop-blur-md py-4 border-b border-border -mx-6 px-6 flex overflow-x-auto gap-4 no-scrollbar">
-            {sections.map((s) => (
-              <button
-                key={s.id}
-                onClick={() => scrollToSection(s.id)}
-                className={`text-sm font-medium whitespace-nowrap px-3 py-1.5 rounded-full transition-colors ${
-                  activeSection === s.id ? "bg-primary text-white" : "bg-muted text-muted-foreground"
-                }`}
-              >
-                {s.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Sticky Sidebar for Desktop */}
-          <div className="hidden lg:block lg:col-span-3">
-            <div className="sticky top-40 space-y-2 border-l border-border pl-6">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4">On This Page</h4>
-              {sections.map((s) => (
+          <div className="lg:hidden sticky top-20 z-30 bg-white/90 backdrop-blur-md py-4 border-b border-border -mx-6 px-6 flex overflow-x-auto gap-3 no-scrollbar">
+            {sections.map((s) => {
+              const Icon = s.icon;
+              const isActive = activeSection === s.id;
+              return (
                 <button
                   key={s.id}
                   onClick={() => scrollToSection(s.id)}
-                  className={`block text-left w-full text-sm font-medium py-1.5 transition-all ${
-                    activeSection === s.id ? "text-primary translate-x-1" : "text-muted-foreground hover:text-foreground"
+                  className={`flex items-center gap-2 text-sm font-medium whitespace-nowrap px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
+                    isActive ? "bg-primary text-white" : "bg-muted text-muted-foreground hover:text-primary"
                   }`}
                 >
-                  {s.label}
+                  <Icon size={14} strokeWidth={1.5} />
+                  <span>{s.label}</span>
                 </button>
-              ))}
+              );
+            })}
+          </div>
+
+          {/* Sticky Sidebar for Desktop */}
+          <div className="hidden lg:block lg:col-span-3 xl:col-span-2">
+            <div className="sticky top-24 border-l border-border pl-6 flex flex-col">
+              {/* Back to Products Link (Desktop) */}
+              <Link 
+                href={breadcrumbHref} 
+                className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-primary transition-colors mb-8"
+              >
+                <ArrowLeft size={16} />
+                Back to {breadcrumb}
+              </Link>
+
+              <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-5">On This Page</h4>
+              <div className="space-y-3">
+                {sections.map((s) => {
+                  const Icon = s.icon;
+                  const isActive = activeSection === s.id;
+                  return (
+                    <button
+                      key={s.id}
+                      onClick={() => scrollToSection(s.id)}
+                      className={`flex items-center gap-2.5 text-left w-full text-sm font-medium py-1.5 transition-all cursor-pointer ${
+                        isActive ? "text-primary translate-x-1" : "text-muted-foreground hover:text-foreground"
+                      }`}
+                    >
+                      <Icon size={16} strokeWidth={1.5} className="shrink-0" />
+                      <span>{s.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
           {/* Content */}
-          <div className="lg:col-span-9 space-y-24 pb-24">
+          <div className="lg:col-span-9 xl:col-span-10 space-y-24 pb-24">
+            {/* Back to Products Link (Mobile Only) */}
+            <div className="mb-4 lg:hidden">
+              <Link 
+                href={breadcrumbHref} 
+                className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-primary transition-colors"
+              >
+                <ArrowLeft size={16} />
+                Back to {breadcrumb}
+              </Link>
+            </div>
             {children}
           </div>
         </div>

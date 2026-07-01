@@ -71,60 +71,19 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Side: Abstract systems blueprint illustration (Architectural Linework) */}
+          {/* Right Side: Enterprise Architecture Illustration */}
           <motion.div 
-            className="lg:col-span-5 hidden lg:block"
+            className="lg:col-span-5 w-full max-w-md mx-auto lg:max-w-none"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="w-full aspect-square border border-border p-6 bg-white shadow-sm flex items-center justify-center relative select-none">
-              {/* Decorative Blueprint SVG Grid */}
-              <svg viewBox="0 0 400 400" className="w-full h-full text-primary" fill="none">
-                {/* Micro architectural background grids */}
-                <defs>
-                  <pattern id="microgrid" width="20" height="20" patternUnits="userSpaceOnUse">
-                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="hsl(var(--border))" strokeWidth="0.5" opacity="0.3" />
-                  </pattern>
-                </defs>
-                <rect width="400" height="400" fill="url(#microgrid)" />
-
-                {/* Concentric System Rings */}
-                <circle cx="200" cy="200" r="140" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 4" opacity="0.3" />
-                <circle cx="200" cy="200" r="100" stroke="currentColor" strokeWidth="0.75" opacity="0.5" />
-                <circle cx="200" cy="200" r="60" stroke="currentColor" strokeWidth="1" opacity="0.8" />
-                <circle cx="200" cy="200" r="10" stroke="currentColor" strokeWidth="2" fill="currentColor" />
-
-                {/* Crosshairs */}
-                <line x1="20" y1="200" x2="380" y2="200" stroke="currentColor" strokeWidth="0.5" opacity="0.2" />
-                <line x1="200" y1="20" x2="200" y2="380" stroke="currentColor" strokeWidth="0.5" opacity="0.2" />
-
-                {/* Diagonal Blueprint Guides */}
-                <line x1="72" y1="72" x2="328" y2="328" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" opacity="0.25" />
-                <line x1="72" y1="328" x2="328" y2="72" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" opacity="0.25" />
-
-                {/* Intersecting System Junction Nodes */}
-                <circle cx="94" cy="94" r="4" stroke="currentColor" strokeWidth="1" fill="white" />
-                <circle cx="306" cy="306" r="4" stroke="currentColor" strokeWidth="1" fill="white" />
-                <circle cx="306" cy="94" r="4" stroke="currentColor" strokeWidth="1" fill="white" />
-                <circle cx="94" cy="306" r="4" stroke="currentColor" strokeWidth="1" fill="white" />
-
-                <circle cx="200" cy="100" r="3" fill="currentColor" />
-                <circle cx="200" cy="300" r="3" fill="currentColor" />
-                <circle cx="100" cy="200" r="3" fill="currentColor" />
-                <circle cx="300" cy="200" r="3" fill="currentColor" />
-
-                {/* Blueprint Dimension Lines & Labels */}
-                <path d="M 50 360 L 50 370 M 350 360 L 350 370 M 50 365 L 350 365" stroke="currentColor" strokeWidth="0.75" opacity="0.4" />
-                <text x="200" y="358" textAnchor="middle" className="font-mono text-[9px] uppercase tracking-widest font-bold fill-accent" opacity="0.7">
-                  SYSTEM CORE // INTEGRATED
-                </text>
-
-                {/* Top Blueprint Dimension Labels */}
-                <text x="200" y="45" textAnchor="middle" className="font-mono text-[8px] uppercase tracking-wider fill-muted-foreground" opacity="0.6">
-                  SECURE ENTERPRISE LAYER
-                </text>
-              </svg>
+              <img
+                src="/images/architecture/KIEHomePageImage.png"
+                alt="YnY AI Enterprise Architecture"
+                className="w-full h-full object-contain select-none pointer-events-none"
+              />
             </div>
           </motion.div>
           
