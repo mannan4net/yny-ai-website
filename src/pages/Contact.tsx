@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
+import { SEO } from "@/components/seo/SEO";
 import { productsData } from "@/data";
 
 export default function Contact() {
@@ -71,6 +72,11 @@ export default function Contact() {
 
   return (
     <Layout>
+      <SEO 
+        title="Contact & Schedule | YnY AI"
+        description="Schedule a conversation with Abdul Mannan to discuss your enterprise platforms and systems integration requirements."
+        canonicalUrl="/contact"
+      />
       <div className="bg-white min-h-screen">
         <div className="bg-primary text-white py-24">
           <div className="container mx-auto px-6">

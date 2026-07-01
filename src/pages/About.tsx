@@ -1,9 +1,15 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEO } from "@/components/seo/SEO";
 import { Leadership } from "@/components/sections/Leadership";
 
 export default function About() {
   return (
     <Layout>
+      <SEO 
+        title="About Abdul Mannan | Enterprise Architect & AI Strategist"
+        description="Learn about Abdul Mannan's twenty years of experience designing mission-critical platforms and his vision for YnY AI enterprise intelligence."
+        canonicalUrl="/about"
+      />
       <div className="bg-white">
         {/* Header */}
         <div className="bg-primary text-white py-24">

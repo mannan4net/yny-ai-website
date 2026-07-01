@@ -30,11 +30,11 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-6">Products</h4>
             <ul className="space-y-2">
-              <li><Link href="/products?product=paai" className="text-slate-400 hover:text-white transition-colors text-sm">PAAI</Link></li>
-              <li><Link href="/products?product=legalpa" className="text-slate-400 hover:text-white transition-colors text-sm">LegalPA</Link></li>
-              <li><a href={AIUNIVERSE_URL} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors text-sm">AIUniverse</a></li>
-              <li><Link href="/products?product=sdlc-factory" className="text-slate-400 hover:text-white transition-colors text-sm">SDLC Factory</Link></li>
-              <li><Link href="/products?product=global-tutor" className="text-slate-400 hover:text-white transition-colors text-sm">Global Tutor</Link></li>
+              <li><Link href="/products/paai" className="text-slate-400 hover:text-white transition-colors text-sm">PAAI</Link></li>
+              <li><Link href="/products/legalpa" className="text-slate-400 hover:text-white transition-colors text-sm">LegalPA</Link></li>
+              <li><Link href="/products/aiuniverse" className="text-slate-400 hover:text-white transition-colors text-sm">AIUniverse</Link></li>
+              <li><Link href="/products/sdlc-factory" className="text-slate-400 hover:text-white transition-colors text-sm">SDLC Factory</Link></li>
+              <li><Link href="/products/global-tutor" className="text-slate-400 hover:text-white transition-colors text-sm">Global Tutor</Link></li>
             </ul>
           </div>
 

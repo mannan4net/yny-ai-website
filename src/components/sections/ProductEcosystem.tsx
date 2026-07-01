@@ -176,7 +176,7 @@ export function ProductEcosystem() {
                   {product.metric}
                 </span>
                 <Link 
-                  href={`/products?product=${product.id}`}
+                  href={`/products/${product.id}`}
                   className="inline-flex items-center text-xs font-bold text-primary hover:text-accent transition-colors group shrink-0"
                 >
                   Learn More
