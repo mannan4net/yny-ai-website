@@ -5,11 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
-import Methodology from "@/pages/Methodology";
 import Products from "@/pages/Products";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
-import Consulting from "@/pages/Consulting";
 import Insights from "@/pages/Insights";
 import Contact from "@/pages/Contact";
 import PAAI from "@/pages/products/PAAI";
@@ -23,7 +21,6 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/methodology" component={Methodology} />
       <Route path="/products" component={Products} />
       <Route path="/products/paai" component={PAAI} />
       <Route path="/products/sdlc-factory" component={SDLCFactory} />
@@ -32,7 +29,6 @@ function Router() {
       <Route path="/products/global-tutor" component={GlobalTutor} />
       <Route path="/about" component={About} />
       <Route path="/services" component={Services} />
-      <Route path="/consulting" component={Consulting} />
       <Route path="/insights" component={Insights} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />

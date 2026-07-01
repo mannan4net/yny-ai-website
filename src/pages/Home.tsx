@@ -43,7 +43,7 @@ export default function Home() {
           <p className="text-xl text-muted-foreground leading-relaxed mb-8">
             Before we deploy platforms, we deploy architecture. Our consulting practice applies the YnY methodology to de-risk your digital transformation and establish a solid engineering foundation.
           </p>
-          <Link href="/consulting" className="inline-flex items-center text-primary font-bold hover:underline">
+          <Link href="/services" className="inline-flex items-center text-primary font-bold hover:underline">
             Explore Consulting Services →
           </Link>
         </div>

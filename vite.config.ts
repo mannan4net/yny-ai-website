@@ -6,8 +6,6 @@ import sitemap from "vite-plugin-sitemap";
 
 const dynamicRoutes = [
   "/",
-  "/methodology",
-  "/consulting",
   "/products",
   "/products/paai",
   "/products/sdlc-factory",
