@@ -13,7 +13,7 @@ export function CTA() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">
-            Let's Build Something Useful
+            Discuss Your Enterprise Architecture
           </h2>
           <p className="text-base text-slate-300 mb-10 leading-relaxed max-w-2xl mx-auto">
             Whether you're exploring legal intelligence, enterprise AI, knowledge retrieval, or software acceleration, we'd love to understand your challenges.
@@ -24,7 +24,7 @@ export function CTA() {
               className="inline-flex items-center justify-center h-14 px-8 bg-white text-primary font-bold hover:bg-muted transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded-none"
               data-testid="link-contact-cta"
             >
-              Book a Conversation
+              Schedule an Architecture Discussion
             </Link>
           </div>
         </motion.div>

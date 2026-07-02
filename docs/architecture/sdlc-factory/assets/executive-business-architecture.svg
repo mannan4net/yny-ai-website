@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="auto" style="background-color: #FFFFFF; font-family: 'Inter', 'Segoe UI', Arial, sans-serif;">
+  <defs>
+    <style>
+      .title { font-size: 18px; font-weight: bold; fill: #0F172A; }
+      .subtitle { font-size: 12px; fill: #475569; }
+      .container-title { font-size: 12px; font-weight: bold; fill: #0F172A; }
+      .comp-title { font-size: 11px; font-weight: bold; fill: #0F172A; }
+      .comp-tech { font-size: 9px; fill: #475569; font-style: italic; }
+      .legend-title { font-size: 11px; font-weight: bold; fill: #0F172A; }
+      .legend-text { font-size: 9px; fill: #475569; }
+      .metadata { font-size: 9px; fill: #64748B; }
+    </style>
+    <!-- Arrow marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0F172A" />
+    </marker>
+    <!-- Dashed arrow marker -->
+    <marker id="arrow-dash" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+    </marker>
+  </defs>
+  <!-- Background Canvas -->
+  <rect width="100%" height="100%" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="30" y="45" class="title">SDLC Factory - Executive Business Architecture (L1)</text>
+  <text x="30" y="65" class="subtitle">Objective: The Engineering Compiler — Compiles raw business intent and software specifications directly into verified, containerized production code.</text>
+  <line x1="30" y1="80" x2="1170" y2="80" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Component: Business Challenges &amp; Needs -->
+  <rect x="100" y="220" width="240" height="140" fill="#FFF5F5" stroke="#DC2626" stroke-width="1.2" rx="4" ry="4" />
+  <g transform="translate(118, 290)">
+      <path d="M -5,-7 L 2,-7 L 5,-4 L 5,7 L -5,7 Z" fill="none" stroke="#DC2626" stroke-width="1.2"/>
+      <path d="M 2,-7 L 2,-4 L 5,-4" fill="none" stroke="#DC2626" stroke-width="1.2"/>
+    </g>
+  <text x="135" y="288" class="comp-title" text-anchor="start">Business Challenges &amp; Needs</text>
+  <text x="135" y="300" class="comp-tech" text-anchor="start">High Inefficiency &amp; Manual Gaps</text>
+
+  <!-- Component: SDLC Factory Intelligence Core -->
+  <rect x="460" y="180" width="280" height="220" fill="#F0F9FF" stroke="#0D9488" stroke-width="1.2" rx="4" ry="4" />
+  <g transform="translate(478, 290)">
+      <circle cx="-4" cy="-3" r="1.5" fill="#0D9488"/>
+      <circle cx="4" cy="-3" r="1.5" fill="#0D9488"/>
+      <circle cx="0" cy="4" r="1.5" fill="#0D9488"/>
+      <line x1="-2.5" y1="-3" x2="2.5" y2="-3" stroke="#0D9488" stroke-width="1"/>
+      <line x1="-3.5" y1="-1.5" x2="-0.8" y2="2.5" stroke="#0D9488" stroke-width="1"/>
+      <line x1="3.5" y1="-1.5" x2="0.8" y2="2.5" stroke="#0D9488" stroke-width="1"/>
+    </g>
+  <text x="495" y="288" class="comp-title" text-anchor="start">SDLC Factory Intelligence Core</text>
+  <text x="495" y="300" class="comp-tech" text-anchor="start">Enterprise Business Solution Engine</text>
+
+  <!-- Component: Strategic Business Outcomes -->
+  <rect x="860" y="220" width="240" height="140" fill="#F0FDFA" stroke="#0D9488" stroke-width="1.2" rx="4" ry="4" />
+  <g transform="translate(878, 290)">
+      <circle cx="-6" cy="4" r="2" fill="none" stroke="#0D9488" stroke-width="1.2"/>
+      <circle cx="6" cy="4" r="2" fill="none" stroke="#0D9488" stroke-width="1.2"/>
+      <circle cx="0" cy="-4" r="2" fill="none" stroke="#0D9488" stroke-width="1.2"/>
+      <line x1="0" y1="-2" x2="0" y2="4" stroke="#0D9488" stroke-width="1.2"/>
+      <line x1="-6" y1="4" x2="6" y2="4" stroke="#0D9488" stroke-width="1.2"/>
+    </g>
+  <text x="895" y="288" class="comp-title" text-anchor="start">Strategic Business Outcomes</text>
+  <text x="895" y="300" class="comp-tech" text-anchor="start">High Accuracy &amp; Instant Delivery</text>
+  <line x1="340" y1="290" x2="460" y2="290" stroke-width="1.5" marker-end="url(#arrow)" stroke="#0F172A"/>
+  <text x="400" y="285" class="metadata" text-anchor="middle">Ingests Context</text>  <line x1="740" y1="290" x2="860" y2="290" stroke-width="1.5" marker-end="url(#arrow)" stroke="#0F172A"/>
+  <text x="800" y="285" class="metadata" text-anchor="middle">Delivers Outcomes</text>
+  <!-- Standard Legend Block -->
+  <g transform="translate(880, 500)">
+    <rect width="260" height="120" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" rx="4"/>
+    <text x="15" y="25" class="legend-title">YnY Architecture Registry Legend</text>
+    <text x="15" y="45" class="legend-text">Product: SDLC Factory</text>
+    <text x="15" y="60" class="legend-text">View: Executive Business (L1)</text>
+    <text x="15" y="75" class="legend-text">Version: 1.0.0 (Approved)</text>
+    <text x="15" y="90" class="legend-text">Standard: STD-017 (Flat Corporate)</text>
+    <text x="15" y="105" class="legend-text">Last Updated: 2026-06-29</text>
+    
+    <!-- Connector examples inside legend -->
+    <line x1="170" y1="45" x2="200" y2="45" stroke="#0F172A" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="210" y="48" class="metadata">Sync (REST/gRPC)</text>
+    
+    <line x1="170" y1="65" x2="200" y2="65" stroke="#475569" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arrow-dash)"/>
+    <text x="210" y="68" class="metadata">Async / Event</text>
+    
+    <rect x="170" y="82" width="12" height="12" fill="#FFFFFF" stroke="#0D9488" stroke-width="1" rx="2"/>
+    <text x="190" y="91" class="metadata">Security Scope</text>
+    
+    <rect x="170" y="98" width="12" height="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1" rx="2"/>
+    <text x="190" y="107" class="metadata">API Gateway</text>
+  </g>
+</svg>

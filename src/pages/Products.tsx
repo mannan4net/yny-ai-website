@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Layout } from "@/components/layout/Layout";
+import { SEO } from "@/components/seo/SEO";
 import { productsData } from "@/data";
 import { Link, useLocation } from "wouter";
 import { Server, ShieldCheck, CheckCircle2 } from "lucide-react";
@@ -22,6 +23,11 @@ export default function Products() {
 
   return (
     <Layout>
+      <SEO 
+        title="Enterprise AI Platforms | YnY AI Products"
+        description="Explore YnY AI's portfolio of enterprise platforms including PAAI, LegalPA, AIUniverse, and SDLC Factory for knowledge management and execution."
+        canonicalUrl="/products"
+      />
       <div className="bg-white pb-24 border-b border-border">
         <div className="bg-primary text-white py-24 mb-16">
           <div className="container mx-auto px-6">
@@ -76,23 +82,31 @@ export default function Products() {
                     <p className="text-sm font-medium text-muted-foreground">{product.deploymentModel}</p>
                   </div>
                   
-                  {product.externalLink ? (
-                    <a
-                      href={product.externalLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center h-14 px-10 bg-primary text-white font-bold text-base hover:bg-primary/90 transition-colors shadow-sm"
-                    >
-                      {product.cta}
-                    </a>
-                  ) : (
+                  <div className="flex flex-wrap gap-4 mt-8">
+                    {product.externalLink ? (
+                      <a
+                        href={product.externalLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center h-14 px-10 bg-primary text-white font-bold text-base hover:bg-primary/90 transition-colors shadow-sm"
+                      >
+                        {product.cta}
+                      </a>
+                    ) : (
+                      <Link 
+                        href={`/contact?product=${product.id}&source=products`}
+                        className="inline-flex items-center justify-center h-14 px-10 bg-primary text-white font-bold text-base hover:bg-primary/90 transition-colors shadow-sm"
+                      >
+                        {product.cta}
+                      </Link>
+                    )}
                     <Link 
-                      href={`/contact?product=${product.id}&source=products`}
-                      className="inline-flex items-center justify-center h-14 px-10 bg-primary text-white font-bold text-base hover:bg-primary/90 transition-colors shadow-sm"
+                      href={`/products/${product.id}`}
+                      className="inline-flex items-center justify-center h-14 px-10 bg-transparent border-2 border-primary text-primary font-bold text-base hover:bg-primary/5 transition-colors shadow-sm"
                     >
-                      {product.cta}
+                      View Platform Details
                     </Link>
-                  )}
+                  </div>
                 </div>
                 
                 <div className="flex-1 w-full bg-white p-8 md:p-10 border border-border shadow-lg shadow-slate-100">

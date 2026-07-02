@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEO } from "@/components/seo/SEO";
 import { insightsData } from "@/data";
 import { Link } from "wouter";
 
@@ -15,6 +16,11 @@ export default function Insights() {
 
   return (
     <Layout>
+      <SEO 
+        title="Insights & Architecture Thinking | YnY AI"
+        description="Perspectives on enterprise architecture, AI strategy, and software engineering from Abdul Mannan and the YnY AI practice."
+        canonicalUrl="/insights"
+      />
       <div className="bg-white min-h-screen">
         <div className="bg-primary text-white py-24">
           <div className="container mx-auto px-6">

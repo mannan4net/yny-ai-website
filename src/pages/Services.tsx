@@ -1,10 +1,16 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEO } from "@/components/seo/SEO";
 import { servicesData } from "@/data";
 import { Link } from "wouter";
 
 export default function Services() {
   return (
     <Layout>
+      <SEO 
+        title="Enterprise Services & Consulting | YnY AI"
+        description="From strategic advisory to managed engineering delivery, YnY AI partners with enterprises to execute secure digital transformation."
+        canonicalUrl="/services"
+      />
       <div className="bg-white">
         <div className="bg-primary text-white py-24">
           <div className="container mx-auto px-6">

@@ -170,19 +170,18 @@ export function ProductEcosystem() {
                 </p>
               </div>
               
-              <div className="pt-6 border-t border-border mt-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <span className="text-[11px] font-mono font-bold text-primary flex items-center gap-2">
-                  <Check className="w-3.5 h-3.5 text-primary shrink-0" />
-                  {product.metric}
-                </span>
+              <div className="pt-6 border-t border-border mt-auto flex flex-col gap-3">
                 <Link 
-                  href={`/products?product=${product.id}`}
-                  className="inline-flex items-center text-xs font-bold text-primary hover:text-accent transition-colors group shrink-0"
+                  href={`/products/${product.id}`}
+                  className="inline-flex items-center justify-center w-full h-10 bg-primary text-primary-foreground font-semibold hover:bg-primary/95 transition-colors focus:outline-none text-xs tracking-wide"
                 >
-                  Learn More
-                  <svg className="w-4.5 h-4.5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
+                  Explore Platform
+                </Link>
+                <Link 
+                  href={`/products/${product.id}#architecture`}
+                  className="inline-flex items-center justify-center w-full h-10 bg-white border border-border text-primary font-semibold hover:bg-muted transition-colors focus:outline-none text-xs tracking-wide"
+                >
+                  Review Architecture
                 </Link>
               </div>
             </div>
