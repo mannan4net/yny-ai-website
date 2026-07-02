@@ -5,7 +5,7 @@ export const productsData = [
     id: 'paai',
     name: 'PAAI',
     tagline: 'The Enterprise Knowledge Operating System — connecting legacy platforms and database records into a single intelligent memory.',
-    category: 'Enterprise Knowledge',
+    category: 'Enterprise Knowledge Platform',
     businessProblem: 'Modern organizations operate across dozens of disconnected collaboration platforms, legacy applications, and databases. Information remains fragmented, making it difficult for teams and executives to obtain complete context, monitor priorities, and make timely decisions.',
     solution: 'PAAI establishes a unified Enterprise Knowledge Operating System. By connecting SaaS platforms, legacy databases, and custom workflows into a single contextual memory layer, PAAI enables secure, cross-system retrieval governed by your company’s access controls (RBAC).\n\nInstead of waiting for manual searches, PAAI continuously monitors activities to deliver proactive intelligence. Its flagship feature, the Morning Executive Intelligence Brief, orchestrates data collection across all systems every morning, delivering a personalized summary of priorities, deadlines, and operational risks directly to your email, Teams, or WhatsApp.',
     architectureHighlights: [
@@ -34,13 +34,13 @@ export const productsData = [
       'Unified AI experience across systems'
     ],
     targetCustomers: 'Enterprises, government bodies, and large organizations requiring unified system intelligence',
-    cta: 'Request Demo',
+    cta: 'Explore Platform',
   },
   {
     id: 'legalpa',
     name: 'LegalPA',
     tagline: 'Constitution to courtroom — all laws in one place',
-    category: 'Legal Intelligence',
+    category: 'Enterprise Legal Platform',
     businessProblem: "Legal professionals waste critical time navigating India's highly fragmented legal codes. Statutes, central/state regulations, and active case law are spread across dozens of disconnected sources, increasing the risk of missing binding precedents and legislative amendments.",
     solution: 'LegalPA unifies the entire Indian legal corpus into a single, semantic search engine. By automatically building a citation network that maps statutory codes directly to judicial precedents, LegalPA enables law firms and compliance teams to conduct instant research, verify procedural filings, and receive real-time alerts on regulatory changes.',
     architectureHighlights: [
@@ -58,13 +58,13 @@ export const productsData = [
     ],
     benefits: ['Cut research time drastically', 'Stay current on legal changes', 'Built for solo practitioners and firms', 'India-specific depth'],
     targetCustomers: 'Law firms, solo practitioners, legal departments, compliance teams',
-    cta: 'Request Demo',
+    cta: 'Explore Platform',
   },
   {
     id: 'aiuniverse',
     name: 'AIUniverse',
     tagline: 'Strategic AI intelligence and platform research for technology leaders.',
-    category: 'AI Intelligence',
+    category: 'Enterprise AI Intelligence Platform',
     businessProblem: 'The AI landscape evolves faster than enterprise teams can track. Critical research breakthroughs, tool releases, and platform shifts are easily missed, resulting in strategic blind spots and misaligned technology investments.',
     solution: 'AIUniverse automates the tracking of global machine learning breakthroughs and vendor releases. By summarizing research papers, parsing platform capabilities, and delivering daily briefings, it helps technology leaders make informed architecture decisions without research overhead.',
     architectureHighlights: [
@@ -82,14 +82,14 @@ export const productsData = [
     ],
     benefits: ['Stay ahead of AI trends', 'Reduce research overhead', 'Make better technology decisions', 'Competitive intelligence'],
     targetCustomers: 'Technology leaders, AI teams, innovation managers, CTOs, product managers',
-    cta: 'Launch AIUniverse',
+    cta: 'Explore Platform',
     externalLink: AIUNIVERSE_URL,
   },
   {
     id: 'sdlc-factory',
     name: 'SDLC Factory',
     tagline: 'From business intent to architecture to code — automating governed software delivery assets.',
-    category: 'Engineering Execution',
+    category: 'Enterprise Software Engineering Platform',
     businessProblem: 'Software initiatives frequently fail due to incomplete requirements, inconsistent system architectures, and manual creation of delivery assets. Organizations struggle to maintain traceability between initial business intent, system designs, and final deployment outcomes.',
     solution: 'SDLC Factory establishes a structured software factory model that translates business requirements directly into architecture blueprints, data models, and user stories. Each asset is traceably linked, creating a continuous, audited chain from concept to production code.\n\nUnlike basic code generators, SDLC Factory structures the entire engineering environment and deployment specification layer. This enables engineering teams to accelerate software delivery while maintaining strict compliance, quality, and architectural consistency.',
     architectureHighlights: [
@@ -117,13 +117,13 @@ export const productsData = [
       'Faster project onboarding'
     ],
     targetCustomers: 'Engineering teams, CTOs, product companies, digital transformation programs',
-    cta: 'Book a Conversation',
+    cta: 'Explore Platform',
   },
   {
     id: 'global-tutor',
     name: 'Global Tutor',
     tagline: 'AI-powered learning, tutoring, assessment, and skill development platform.',
-    category: 'Learning Ecosystem',
+    category: 'Enterprise Learning Platform',
     businessProblem: 'Learning remains fragmented across academic institutions, independent educators, organizations, and digital platforms. Learners struggle to discover trusted expertise, while educators lack intelligent tools to deliver personalized, measurable learning experiences at scale.',
     solution: 'Global Tutor establishes an AI-native learning ecosystem that connects learners, educators, institutions, learning resources, and assessments into a unified intelligent platform. It combines tutoring, adaptive learning, AI assistance, assessments, collaboration, and structured learning pathways to personalize education, accelerate skill development, and support lifelong learning across academic, professional, and organizational environments.',
     architectureHighlights: [
@@ -145,7 +145,7 @@ export const productsData = [
       'Deliver measurable, personalized education'
     ],
     targetCustomers: 'Educational Institutions, Independent Educators, Professional Training Organizations, Corporate Learning & Development, Government Training Programs',
-    cta: 'Book a Conversation',
+    cta: 'Explore Platform',
   },
 ];
 

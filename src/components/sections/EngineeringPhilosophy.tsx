@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Layers, BookOpen, ShieldCheck, Cpu } from "lucide-react";
 
-export function Approach() {
+export function EngineeringPhilosophy() {
   const pillars = [
     {
       icon: Layers,
@@ -35,8 +35,8 @@ export function Approach() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-3">
-            Core Principles
+          <h2 className="text-sm font-bold uppercase tracking-wider text-accent mb-3">
+            Architecture First. AI Second. Enterprise Always.
           </h2>
           <h3 className="text-3xl font-bold text-primary tracking-tight">
             Engineering Philosophy

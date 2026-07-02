@@ -34,13 +34,16 @@ export interface ArchitectureLayer {
 
 export interface ProductConfig {
   slug: string;
+  badge?: string;
   title: string;
+  classification?: string;
   category: string;
   description: string;
   
   // Overview - Optional Vision & Mission
   vision?: string;
   mission?: string;
+  kpis?: { label: string; value: string; description?: string }[];
   highlights?: Highlight[];
 
   // Business Value
@@ -71,9 +74,15 @@ export interface ProductConfig {
 export const architectureRegistry: Record<string, ProductConfig> = {
   paai: {
     slug: "paai",
-    title: "Transform Enterprise Knowledge into Intelligent Action",
-    category: "Enterprise AI Operating Platform",
-    description: "PAAI (Personal AI Assistance Interface) is an enterprise AI platform that securely connects your organization's documents, applications, databases, APIs, communication channels, and AI models into a single intelligent interface.\n\nRather than replacing existing systems, PAAI becomes the intelligence layer across the enterprise—understanding context, retrieving trusted information, executing business workflows, and providing secure AI assistance tailored to every user, team, and business function.\n\nBuilt on modern AI architecture including Retrieval-Augmented Generation (RAG), Model Context Protocol (MCP), enterprise RBAC, vector search, and multi-model AI orchestration, PAAI enables organizations to deploy trusted AI without compromising governance, privacy, or security.",
+    badge: "ENTERPRISE PLATFORM",
+    title: "PAAI",
+    classification: "Enterprise Knowledge Platform",
+    category: "Enterprise Knowledge Platform",
+    description: "Transform Enterprise Knowledge into Intelligent Action. PAAI (Personal AI Assistance Interface) is an enterprise AI platform that securely connects your organization's documents, applications, databases, APIs, communication channels, and AI models into a single intelligent interface.\n\nRather than replacing existing systems, PAAI becomes the intelligence layer across the enterprise—understanding context, retrieving trusted information, executing business workflows, and providing secure AI assistance tailored to every user, team, and business function.\n\nBuilt on modern AI architecture including Retrieval-Augmented Generation (RAG), Model Context Protocol (MCP), enterprise RBAC, vector search, and multi-model AI orchestration, PAAI enables organizations to deploy trusted AI without compromising governance, privacy, or security.",
+    kpis: [
+      { label: "AI Models Supported", value: "Multi-Model" },
+      { label: "Security & Governance", value: "Enterprise RBAC" }
+    ],
     businessScenarioTitle: "Your Enterprise. One Intelligent Interface. Unlimited Possibilities.",
     businessScenarioDesc: "Most organizations have invested heavily in ERP, CRM, HRMS, Finance, SharePoint, emails, cloud storage, and countless business applications. Unfortunately, knowledge remains fragmented across systems, making information difficult to discover and business decisions slower than they should be.\n\nPAAI creates a unified enterprise intelligence layer that connects these systems and transforms organizational knowledge into immediate, secure, AI-powered assistance.",
     businessScenarioIconName: "brain",
@@ -85,28 +94,24 @@ export const architectureRegistry: Record<string, ProductConfig> = {
     ],
     stakeholders: [
       {
-        title: "Unified Enterprise Knowledge",
-        description: "Break information silos by securely connecting structured and unstructured enterprise data."
+        title: "Executive Leadership",
+        description: "Accelerate enterprise decision making by unifying fragmented organizational knowledge into immediate, secure intelligence.",
+        benefits: ["Faster decision making", "Unified knowledge visibility", "Reduced operational costs"]
       },
       {
-        title: "AI Without Vendor Lock-in",
-        description: "Adopt AI technologies confidently while retaining complete flexibility to switch providers whenever business needs evolve."
+        title: "IT & Security Leadership",
+        description: "Adopt future-proof technology without vendor lock-in, ensuring every response respects strict organizational RBAC and governance policies.",
+        benefits: ["Vendor independence", "Enterprise security first", "Future-proof architecture"]
       },
       {
-        title: "Enterprise Security First",
-        description: "Every AI response respects organizational RBAC, tenant boundaries, document sensitivity, and enterprise governance policies."
+        title: "Operations Teams",
+        description: "Scale efficiency by automating repetitive information retrieval, workflow execution, and document search.",
+        benefits: ["Lower operational costs", "Process automation", "Instant knowledge retrieval"]
       },
       {
-        title: "Faster Decision Making",
-        description: "Reduce the time spent searching documents, systems, emails, and reports by delivering contextual answers instantly."
-      },
-      {
-        title: "Lower Operational Costs",
-        description: "Automate repetitive information retrieval, knowledge discovery, document search, and workflow execution."
-      },
-      {
-        title: "Future-Proof AI Platform",
-        description: "Designed to continuously adopt emerging AI models, enterprise tools, and automation technologies without architectural redesign."
+        title: "Knowledge Workers",
+        description: "Break information silos by securely accessing structured and unstructured enterprise data through a single, compliant interface.",
+        benefits: ["Increased productivity", "Contextual assistance", "Seamless tool integration"]
       }
     ],
     capabilities: [
@@ -115,7 +120,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
         description: "Supports Enterprise RAG, Semantic Search, Vector Database Integration, Document Chunking, Intelligent Embedding Pipeline, Metadata-Based Filtering, and Context-Aware Responses."
       },
       {
-        title: "AI Platform Management",
+        title: "AI Governance & Operations",
         description: "Supports Multi-Model AI Support, Dynamic AI Provider Configuration, Embedding Model Management, LLM Model Management, AI Vendor Independence, AI Performance Benchmarking, and Cost/Usage Monitoring."
       },
       {
@@ -127,11 +132,11 @@ export const architectureRegistry: Record<string, ProductConfig> = {
         description: "Includes Multi-Tenant Architecture, Role-Based Access Control (RBAC), Document-Level Authorization, Chunk-Level Security, Audit Logging, Secure Credential Management, and Encryption Support."
       },
       {
-        title: "Intelligent Automation",
+        title: "Workflow Orchestration",
         description: "Includes AI Assistants, Workflow Automation, Task Orchestration, Prompt Management, Agent Execution, Enterprise Tool Invocation, and Context Preservation."
       },
       {
-        title: "Administration",
+        title: "Enterprise Administration",
         description: "Includes Tenant Management, User Management, AI Provider Management, Knowledge Base Management, Document Lifecycle, Configuration Management, and Monitoring Dashboard."
       }
     ],
@@ -144,24 +149,20 @@ export const architectureRegistry: Record<string, ProductConfig> = {
         items: ["Web Portal", "Mobile Applications", "Microsoft Teams", "WhatsApp", "Slack", "Email", "MCP Clients", "Voice Assistants"]
       },
       {
+        title: "Business Services",
+        items: ["Workflow Orchestration", "ERP Integration", "CRM Integration", "Document Management", "Enterprise Automation"]
+      },
+      {
         title: "Intelligence Layer",
-        items: ["Conversation Engine", "Context Management", "Prompt Orchestration", "AI Decision Engine", "Memory Management"]
+        items: ["Conversation Engine", "Context Management", "Prompt Orchestration", "RAG Engine", "Semantic Search", "Knowledge Graph"]
       },
       {
-        title: "AI Platform",
-        items: ["AI Provider Management", "LLM Management", "Embedding Services", "Prompt Library", "Model Registry", "AI Configuration", "Usage Analytics"]
-      },
-      {
-        title: "Enterprise Knowledge",
-        items: ["RAG Engine", "Vector Store", "Document Repository", "Semantic Search", "Knowledge Graph (Future)", "Metadata Engine"]
-      },
-      {
-        title: "Business Integration",
-        items: ["ERP", "CRM", "Finance", "HRMS", "Project Management", "Document Management", "APIs", "Databases", "External MCP Tools"]
+        title: "Platform Services",
+        items: ["AI Provider Management", "LLM Management", "Embedding Services", "Prompt Library", "Model Registry", "Usage Analytics"]
       },
       {
         title: "Enterprise Foundation",
-        items: ["Authentication", "Authorization", "Multi-Tenancy", "Audit", "Monitoring", "Security", "Configuration", "Observability"]
+        items: ["Authentication", "Authorization", "Multi-Tenancy", "Role-Based Access Control", "Audit & Compliance", "Observability"]
       }
     ],
     useCases: [
@@ -253,7 +254,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
       },
       {
         phase: "Phase 4",
-        title: "Future Vision",
+        title: "Enterprise Intelligence Fabric",
         status: "Planned",
         items: [
           "Comprehensive Enterprise AI Operating Platform",
@@ -267,11 +268,15 @@ export const architectureRegistry: Record<string, ProductConfig> = {
   },
   "sdlc-factory": {
     slug: "sdlc-factory",
+    badge: "ENTERPRISE PLATFORM",
     title: "SDLC Factory",
-    category: "AI Software Engineering Platform",
-    description: "SDLC Factory is an enterprise AI platform that transforms the entire Software Development Lifecycle into an intelligent, structured, and repeatable engineering process. It combines AI-assisted requirements engineering, architecture design, data modeling, API design, quality engineering, DevOps automation, governance, and enterprise knowledge management within a unified digital workspace.\n\nRather than replacing engineering teams, SDLC Factory augments architects, analysts, developers, QA engineers, and project managers with AI-driven workflows that accelerate delivery while maintaining enterprise standards, traceability, and architectural integrity.\n\nBuilt using YnY's enterprise engineering methodology, the platform enables organizations to modernize software delivery, improve collaboration, reduce project risk, and establish a scalable foundation for AI-assisted software engineering.",
-    vision: "To become the world's most intelligent AI Software Engineering Platform, enabling organizations to design, build, govern, and evolve enterprise software with speed, consistency, and confidence.",
-    mission: "Empower engineering teams with AI-driven automation, structured methodologies, reusable knowledge, and enterprise governance to deliver high-quality software faster and more efficiently.",
+    classification: "Enterprise Software Engineering Platform",
+    category: "Enterprise Software Engineering Platform",
+    description: "SDLC Factory is an enterprise platform that transforms the entire Software Development Lifecycle into an intelligent, structured, and repeatable engineering process. It combines AI-assisted requirements engineering, architecture design, data modeling, API design, quality engineering, DevOps automation, governance, and enterprise knowledge management within a unified digital workspace.\n\nRather than replacing engineering teams, SDLC Factory augments architects, analysts, developers, QA engineers, and project managers with AI-driven workflows that accelerate delivery while maintaining enterprise standards, traceability, and architectural integrity.\n\nBuilt using YnY's enterprise engineering methodology, the platform enables organizations to modernize software delivery, improve collaboration, reduce project risk, and establish a scalable foundation for enterprise software engineering.",
+    kpis: [
+      { label: "Engineering Governance", value: "End-to-End" },
+      { label: "Delivery Speed", value: "Accelerated" }
+    ],
     highlights: [
       { title: "AI-assisted requirements engineering" },
       { title: "Intelligent project discovery" },
@@ -292,32 +297,32 @@ export const architectureRegistry: Record<string, ProductConfig> = {
     stakeholders: [
       {
         title: "Product Owners",
-        description: "Product Owners gain a structured environment to transform business ideas into well-defined engineering initiatives. AI assists in capturing business objectives, generating epics and user stories, maintaining requirement traceability, and ensuring alignment between business goals and implementation.",
+        description: "Accelerate project initiation and maintain end-to-end traceability, ensuring exact alignment between business goals and implementation outcomes while reducing requirement ambiguity.",
         benefits: ["Faster project initiation", "Improved requirement clarity", "End-to-end traceability", "Better stakeholder collaboration", "Reduced requirement ambiguity", "Improved delivery predictability"]
       },
       {
         title: "Business Analysts",
-        description: "Business Analysts accelerate requirement gathering through AI-assisted discovery, structured templates, domain knowledge, workflow modeling, and automated documentation.",
+        description: "Improve requirement quality and standardize business documentation through structured methodologies, workflow modeling, and comprehensive domain analysis.",
         benefits: ["Faster requirement elicitation", "Consistent business documentation", "AI-generated user stories", "BPMN workflow creation", "Improved business alignment", "Better requirement quality"]
       },
       {
         title: "Solution Architects",
-        description: "Architects can design scalable enterprise solutions using AI-assisted architecture recommendations, reusable design patterns, integration blueprints, and standardized engineering practices.",
+        description: "Establish enterprise governance and design scalable solutions using reusable architecture patterns, standardized engineering practices, and integrated architectural blueprints.",
         benefits: ["Consistent architecture", "Reusable solution patterns", "Enterprise governance", "Faster solution design", "Improved technology alignment", "Architecture traceability"]
       },
       {
         title: "Development Teams",
-        description: "Developers receive structured implementation guidance, API contracts, database models, coding standards, and AI-assisted development support.",
+        description: "Reduce technical debt and improve code consistency by adhering to structured implementation guidance, governed API contracts, and established coding standards.",
         benefits: ["Reduced development effort", "Improved code consistency", "Faster implementation", "Better documentation", "Reduced technical debt", "Higher productivity"]
       },
       {
         title: "QA Teams",
-        description: "Quality engineers generate comprehensive testing strategies directly from requirements, ensuring complete validation and improved software quality.",
+        description: "Improve defect prevention and increase release confidence by generating comprehensive testing strategies directly from traced business requirements.",
         benefits: ["Automated test generation", "Better requirement coverage", "Faster regression planning", "Improved defect prevention", "Requirement traceability", "Higher release confidence"]
       },
       {
         title: "Enterprise Leadership",
-        description: "Executives gain visibility across engineering initiatives through governance, delivery metrics, AI insights, and standardized engineering processes.",
+        description: "Gain portfolio visibility across engineering initiatives, reduce delivery risk, optimize resource utilization, and accelerate digital transformation through standardized governance.",
         benefits: ["Portfolio visibility", "Better governance", "Reduced delivery risk", "Engineering standardization", "Improved resource utilization", "Faster digital transformation"]
       }
     ],
@@ -453,7 +458,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
       },
       {
         phase: "Phase 2",
-        title: "Intelligent Engineering Workspace",
+        title: "Requirements Intelligence",
         status: "Current",
         items: [
           "AI architecture assistant",
@@ -468,7 +473,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
       },
       {
         phase: "Phase 3",
-        title: "Autonomous SDLC Factory",
+        title: "Autonomous Delivery",
         status: "Planned",
         items: [
           "AI solution generation",
@@ -483,7 +488,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
       },
       {
         phase: "Phase 4",
-        title: "Enterprise Engineering Ecosystem",
+        title: "Software Engineering Ecosystem",
         status: "Planned",
         items: [
           "Self-improving engineering platform",
@@ -501,30 +506,40 @@ export const architectureRegistry: Record<string, ProductConfig> = {
   },
   aiuniverse: {
     slug: "aiuniverse",
+    badge: "ENTERPRISE PLATFORM",
     title: "AI Universe",
+    classification: "Enterprise AI Intelligence Platform",
     category: "Enterprise AI Intelligence Platform",
     description: "Navigate the rapidly evolving AI landscape with confidence. AI Universe transforms thousands of AI models, platforms, frameworks, applications, and vendors into structured, searchable business intelligence—helping organizations discover the right AI solutions, compare technologies, and accelerate adoption.\n\nArtificial Intelligence is evolving faster than most organizations can evaluate it.\n\nEvery week introduces new foundation models, AI applications, open-source frameworks, enterprise platforms, infrastructure providers, and specialized industry solutions. Technology leaders often struggle to distinguish innovation from marketing noise.\n\nAI Universe was created to solve this challenge.\n\nRather than acting as another AI directory, AI Universe serves as an intelligent knowledge platform that continuously organizes the AI ecosystem into meaningful business, technical, and architectural perspectives.\n\nWhether evaluating Generative AI, Machine Learning platforms, Enterprise AI vendors, AI Infrastructure, or industry-specific solutions, AI Universe enables faster discovery, informed comparisons, and better strategic decisions.",
-    vision: "Become the trusted intelligence layer for understanding the global AI ecosystem.\n\nAI Universe enables organizations to answer questions such as:\n- Which AI solutions best fit our business?\n- Which vendors dominate a particular domain?\n- How do competing models compare?\n- What technologies are emerging?\n- Which platforms integrate together?\n- What architecture patterns are becoming industry standards?",
+    kpis: [
+      { label: "AI Entities Indexed", value: "10,000+" },
+      { label: "Market Intelligence", value: "Real-Time" }
+    ],
     stakeholders: [
       {
-        title: "Strategic Technology Evaluation",
-        description: "Evaluate AI vendors, models, frameworks, and enterprise platforms using consistent comparison criteria instead of relying on marketing material."
+        title: "Enterprise Architects",
+        description: "Evaluate AI vendors, models, frameworks, and enterprise platforms using consistent comparison criteria to accelerate safe adoption.",
+        benefits: ["Standardized evaluation", "Architecture alignment", "Risk reduction"]
       },
       {
-        title: "Faster AI Adoption",
-        description: "Reduce weeks of market research into minutes by discovering relevant AI technologies based on business objectives."
+        title: "Innovation Teams",
+        description: "Reduce weeks of market research into minutes by discovering relevant AI technologies aligned perfectly with strategic business objectives.",
+        benefits: ["Faster technology discovery", "Market visibility", "Accelerated innovation"]
       },
       {
-        title: "Executive Decision Support",
-        description: "Provide CIOs, CTOs, Enterprise Architects, Innovation Teams, and Digital Transformation Leaders with an objective view of the AI ecosystem before making technology investments."
+        title: "Executive Leadership",
+        description: "Gain an objective, structured view of the AI ecosystem to inform strategic technology investments and enterprise transformation.",
+        benefits: ["Objective market intelligence", "Better investment decisions", "Reduced technology risk"]
       },
       {
-        title: "AI Landscape Visibility",
-        description: "Understand how thousands of AI products relate across Foundation Models, AI Applications, AI Infrastructure, AI Frameworks, AI Platforms, AI Services, AI Vendors, and Industry Solutions."
+        title: "Procurement Teams",
+        description: "Understand how thousands of AI products relate across vendors and platforms to negotiate better contracts and avoid vendor lock-in.",
+        benefits: ["Vendor transparency", "Avoid vendor lock-in", "Better technology overlap visibility"]
       },
       {
-        title: "Continuous Market Intelligence",
-        description: "Track emerging technologies, vendor movements, product launches, acquisitions, and innovation trends from a single intelligence platform."
+        title: "Strategy & Operations",
+        description: "Track emerging technologies, vendor movements, product launches, acquisitions, and innovation trends from a single intelligence platform.",
+        benefits: ["Continuous market intelligence", "Trend visibility", "Competitive advantage"]
       }
     ],
     capabilities: [
@@ -566,24 +581,24 @@ export const architectureRegistry: Record<string, ProductConfig> = {
     architectureDescription: "AI Universe is designed as a continuously evolving AI intelligence platform composed of multiple interconnected layers.",
     architectureLayers: [
       {
-        title: "AI Data Collection Layer",
-        items: ["AI Vendors", "Research Publications", "Documentation", "Product Releases", "Open Source Projects", "Industry Reports", "Public APIs"]
-      },
-      {
-        title: "Knowledge Processing Layer",
-        items: ["Products", "Vendors", "Models", "Categories", "Capabilities", "Industries", "Technologies", "Relationships"]
-      },
-      {
-        title: "Intelligence Engine",
-        items: ["AI Classification", "Semantic Search", "Vector Embeddings", "Taxonomy Engine", "Recommendation Models", "Similarity Detection", "Knowledge Graph"]
-      },
-      {
         title: "Experience Layer",
         items: ["Executive View", "Business Explorer", "Technology Explorer", "AI Architect Workspace", "Research Workspace", "Comparison Workspace"]
       },
       {
-        title: "API & Integration Layer",
+        title: "Business Services",
         items: ["Enterprise Knowledge Platforms", "Internal AI Portals", "Decision Support Systems", "Innovation Platforms", "Learning Platforms", "External AI Applications"]
+      },
+      {
+        title: "Intelligence Layer",
+        items: ["AI Classification", "Semantic Search", "Vector Embeddings", "Taxonomy Engine", "Recommendation Models", "Similarity Detection", "Knowledge Graph"]
+      },
+      {
+        title: "Knowledge Layer",
+        items: ["Products", "Vendors", "Models", "Categories", "Capabilities", "Industries", "Technologies", "Relationships"]
+      },
+      {
+        title: "Infrastructure",
+        items: ["AI Vendors", "Research Publications", "Documentation", "Product Releases", "Open Source Projects", "Industry Reports", "Public APIs"]
       }
     ],
     useCases: [
@@ -636,7 +651,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
     roadmapPhases: [
       {
         phase: "Phase 1",
-        title: "AI Intelligence Foundation",
+        title: "Foundation",
         status: "Completed",
         items: [
           "AI ecosystem taxonomy",
@@ -649,7 +664,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
       },
       {
         phase: "Phase 2",
-        title: "AI Knowledge Graph",
+        title: "Knowledge Intelligence",
         status: "Current",
         items: [
           "Relationship engine",
@@ -661,7 +676,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
       },
       {
         phase: "Phase 3",
-        title: "AI Recommendation Engine",
+        title: "Decision Intelligence",
         status: "Planned",
         items: [
           "Personalized recommendations",
@@ -673,7 +688,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
       },
       {
         phase: "Phase 4",
-        title: "AI Market Intelligence",
+        title: "Global AI Intelligence Network",
         status: "Planned",
         items: [
           "Daily AI news intelligence",
@@ -683,26 +698,21 @@ export const architectureRegistry: Record<string, ProductConfig> = {
           "Investment insights",
           "Market movement dashboards"
         ]
-      },
-      {
-        phase: "Phase 5",
-        title: "Enterprise Intelligence Platform",
-        status: "Planned",
-        items: [
-          "Transform AI Universe into the world's most comprehensive enterprise AI intelligence platform",
-          "Support technology discovery and architecture planning",
-          "Support procurement, learning, and research",
-          "Enable strategic AI decision-making from a single ecosystem"
-        ]
       }
     ],
     maturityStatus: "Phase 2 Current"
   },
   legalpa: {
     slug: "legalpa",
+    badge: "ENTERPRISE PLATFORM",
     title: "Legal PA",
-    category: "Legal Intelligence Platform",
-    description: "Legal PA is an enterprise legal intelligence platform that brings together constitutions, statutes, acts, rules, regulations, judicial decisions, notifications, circulars and legal reference materials into a unified AI-powered knowledge ecosystem.\n\nDesigned for lawyers, law firms, corporate legal departments, compliance teams, government agencies, researchers and students, the platform enables users to discover legal information faster, understand legal relationships, monitor regulatory changes and obtain AI-assisted legal insights while maintaining complete traceability to authoritative legal sources.\n\nBuilt using YnY's enterprise engineering methodology, Legal PA combines semantic search, legal knowledge graphs, intelligent document discovery, citation management and scalable cloud-native architecture into a single platform for modern legal practice.",
+    classification: "Enterprise Legal Platform",
+    category: "Enterprise Legal Platform",
+    description: "Legal PA is an Enterprise Legal Platform designed to modernize legal research, compliance monitoring, and judicial intelligence. It unifies fragmented statutory databases, judicial precedents, and regulatory codes into a single, highly structured legal knowledge graph.\n\nRather than relying on manual keyword searches across disjointed systems, legal professionals can instantly discover relevant statutes, track historical amendments, explore citation networks, and receive intelligent legal summaries.\n\nBuilt on a foundation of semantic search, knowledge graphs, and large language models (LLMs), Legal PA delivers an enterprise-grade legal intelligence layer that ensures precision, trustworthiness, and comprehensive legal insight.",
+    kpis: [
+      { label: "Search Paradigm", value: "Semantic" },
+      { label: "Knowledge Graph", value: "Connected" }
+    ],
     vision: "To become the world's most comprehensive AI-powered legal intelligence platform, enabling trusted access to laws, judicial knowledge and legal insights across jurisdictions.",
     mission: "Empower legal professionals, organizations and citizens with intelligent access to reliable legal knowledge through AI-assisted discovery, research and legal intelligence.",
     highlights: [
@@ -720,26 +730,26 @@ export const architectureRegistry: Record<string, ProductConfig> = {
     stakeholders: [
       {
         title: "Legal Professionals",
-        description: "Legal PA significantly reduces the time required to locate statutes, judicial precedents and regulatory information.\n\nThe platform intelligently connects related legal provisions, judicial interpretations and historical amendments, enabling lawyers to focus on legal strategy rather than manual research.",
+        description: "Accelerate legal research and significantly reduce the time required to locate statutes, judicial precedents, and regulatory information. Intelligently connect legal provisions to focus entirely on legal strategy.",
         benefits: ["Faster legal research", "Improved legal accuracy", "AI-assisted case analysis", "Trusted legal references", "Intelligent document discovery", "Better client service"]
       },
       {
         title: "Law Firms",
-        description: "Law firms gain a centralized legal knowledge platform that improves collaboration, research consistency and operational efficiency across practice areas.",
+        description: "Improve collaboration, research consistency, and operational efficiency across practice areas through a centralized enterprise knowledge platform.",
         benefits: ["Shared legal knowledge", "Faster case preparation", "Improved research productivity", "Standardized legal references", "Team collaboration", "Knowledge retention"]
       },
       {
-        title: "Corporate Legal & Compliance Teams",
-        description: "Organizations can continuously monitor legal obligations, regulatory updates and compliance requirements while maintaining access to current legal references.",
+        title: "Corporate Legal Teams",
+        description: "Reduce risk and ensure continuous visibility into legal obligations, regulatory updates, and compliance requirements.",
         benefits: ["Regulatory visibility", "Compliance monitoring", "Risk reduction", "Faster legal reviews", "Corporate governance support", "Policy alignment"]
       },
       {
-        title: "Government & Public Sector",
-        description: "Government departments and regulatory bodies can improve access to legislation, policy documents and legal guidance while supporting transparency and digital governance initiatives."
+        title: "Government Departments",
+        description: "Support transparency and digital governance initiatives by standardizing access to legislation, policy documents, and legal guidance."
       },
       {
-        title: "Students & Researchers",
-        description: "Students, universities and researchers receive structured access to legal knowledge, judicial history and AI-assisted legal exploration that supports learning and academic research."
+        title: "Academic Institutions",
+        description: "Accelerate academic research and learning through structured access to legal knowledge, judicial history, and semantic legal exploration."
       }
     ],
     capabilities: [
@@ -799,7 +809,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
     ],
     useCases: [
       {
-        title: "Lawyers",
+        title: "Legal Departments",
         description: "Research statutes, judgments and legal precedents within a unified AI-assisted legal workspace.",
         iconName: "scale"
       },
@@ -809,22 +819,22 @@ export const architectureRegistry: Record<string, ProductConfig> = {
         iconName: "activity"
       },
       {
-        title: "Corporate Legal Teams",
+        title: "Corporate Compliance",
         description: "Track regulatory obligations, perform legal reviews and support compliance initiatives.",
         iconName: "shield"
       },
       {
-        title: "Government Departments",
+        title: "Government Operations",
         description: "Provide centralized access to legislation, notifications and policy documents.",
         iconName: "settings"
       },
       {
-        title: "Compliance Officers",
+        title: "Risk & Policy Executives",
         description: "Monitor regulatory changes and assess organizational compliance requirements.",
         iconName: "activity"
       },
       {
-        title: "Legal Researchers",
+        title: "Legal Research Units",
         description: "Explore legal relationships, historical amendments and judicial interpretations using semantic search.",
         iconName: "brain"
       },
@@ -834,7 +844,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
         iconName: "book"
       },
       {
-        title: "Citizens",
+        title: "Citizen Services",
         description: "Understand laws, legal rights and government regulations through accessible legal information and intelligent search.",
         iconName: "scale"
       }
@@ -842,7 +852,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
     roadmapPhases: [
       {
         phase: "Phase 1",
-        title: "Legal Knowledge Foundation",
+        title: "Foundation",
         status: "Completed",
         items: [
           "Constitution repository",
@@ -857,7 +867,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
       },
       {
         phase: "Phase 2",
-        title: "AI Legal Intelligence",
+        title: "Semantic Legal Search",
         status: "Current",
         items: [
           "Semantic legal search",
@@ -872,7 +882,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
       },
       {
         phase: "Phase 3",
-        title: "Enterprise Legal Platform",
+        title: "Legal Intelligence",
         status: "Planned",
         items: [
           "Contract intelligence",
@@ -886,7 +896,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
       },
       {
         phase: "Phase 4",
-        title: "Global Legal Intelligence Network",
+        title: "Connected Legal Ecosystem",
         status: "Planned",
         items: [
           "Multi-jurisdiction legal databases",
@@ -903,45 +913,49 @@ export const architectureRegistry: Record<string, ProductConfig> = {
   },
   "global-tutor": {
     slug: "global-tutor",
+    badge: "ENTERPRISE PLATFORM",
     title: "Global Tutor",
-    category: "Learning Ecosystem",
-    description: "Global Tutor is an intelligent education platform that connects students, educators, institutions, coaching centers, online academies, educational consultants, and learning partners through a unified digital ecosystem.\n\nRather than functioning as a traditional tutoring marketplace, Global Tutor creates an intelligent education network where learners discover the right educational opportunities, educators build professional digital identities, institutions expand their reach, and AI continuously improves discovery, matching, communication, and learning outcomes.\n\nBuilt using YnY's enterprise engineering methodology, the platform combines marketplace technology, AI-assisted search, verified educator profiles, structured learning pathways, multilingual support, and scalable cloud architecture into a single ecosystem designed for modern education.",
-    vision: "To become the world's most intelligent education ecosystem where every learner can discover the right educational opportunity regardless of geography, language, or learning style.",
-    mission: "Enable accessible, trustworthy and personalized education by connecting the global education community through intelligent technology.",
+    classification: "Enterprise Learning Platform",
+    category: "Enterprise Learning Platform",
+    description: "Global Tutor is an Enterprise Learning Platform that connects learners, educators, institutions, coaching organizations, and enterprise education programmes through governed knowledge, verified expertise, intelligent discovery, and AI-assisted learning services.\n\nGlobal Tutor is built on the principle that modern education requires governed knowledge, verified expertise, intelligent discovery, and connected learning ecosystems—not isolated tutoring platforms.\n\nBuilt using YnY's enterprise engineering methodology, the platform combines learning orchestration, AI-assisted search, verified educator profiles, structured learning pathways, multilingual support, and scalable cloud architecture into a single ecosystem designed for modern education.",
+    kpis: [
+      { label: "Verified Faculty", value: "Global Network" },
+      { label: "Learning Orchestration", value: "End-to-End" }
+    ],
     highlights: [
-      { title: "AI-powered tutor discovery" },
-      { title: "Intelligent student requirement matching" },
-      { title: "Global educator marketplace" },
-      { title: "Institution onboarding" },
-      { title: "Course and program discovery" },
-      { title: "Multi-board and curriculum support" },
-      { title: "Online and offline learning" },
-      { title: "Secure communication" },
-      { title: "Digital educator profiles" },
+      { title: "Verified Faculty Network" },
+      { title: "Intelligent Learning Network" },
+      { title: "Learning Orchestration" },
+      { title: "Institution Management" },
+      { title: "AI Discovery" },
+      { title: "Enterprise Administration" },
+      { title: "Education Analytics" },
+      { title: "Governed Learning" },
+      { title: "Digital Educator Profiles" },
       { title: "Enterprise-grade platform architecture" }
     ],
     stakeholders: [
       {
         title: "Students",
-        description: "Students no longer need to search across multiple websites or rely on word-of-mouth recommendations. Global Tutor analyzes learning requirements and intelligently recommends tutors, coaching institutes, courses, and educational services that best match academic goals, budget, preferred language, teaching style, location, and availability.",
-        benefits: ["Faster tutor discovery", "Better learning outcomes", "Personalized recommendations", "Transparent educator profiles", "Verified teaching experience", "Simplified communication"]
+        description: "Accelerate learning outcomes by intelligently matching educational requirements with verified faculty, courses, and educational services globally.",
+        benefits: ["Faster faculty discovery", "Better learning outcomes", "Personalized recommendations", "Transparent educator profiles", "Verified teaching experience", "Simplified communication"]
       },
       {
         title: "Teachers",
-        description: "Educators receive a professional digital identity rather than simply appearing in a listing directory. The platform continuously recommends suitable students based on expertise instead of requiring teachers to compete through advertising.",
+        description: "Build professional digital portfolios and receive intelligent student matches based on verified expertise and teaching methodology.",
         benefits: ["Showcase qualifications & certifications", "Manage subjects & boards", "Define availability & language preferences", "Display student reviews", "Build digital portfolios"]
       },
       {
         title: "Educational Institutions",
-        description: "Schools, coaching centers, universities and academies can increase visibility, publish programs, attract students, manage inquiries, build institutional profiles, promote courses, and expand internationally."
+        description: "Increase institutional visibility and streamline student acquisition through an enterprise directory and intelligent inquiry routing."
       },
       {
-        title: "Parents",
-        description: "Parents gain confidence through verified educator information, structured comparisons, AI recommendations, transparent reviews and simplified communication."
+        title: "Families & Guardians",
+        description: "Reduce educational risk and gain confidence through verified educator credentials, AI recommendations, and transparent performance reviews."
       },
       {
         title: "Education Businesses",
-        description: "Educational consultants, counselors, language centers, training institutes, skill providers and learning organizations participate in a shared ecosystem that increases visibility and business growth."
+        description: "Accelerate business growth by participating in a shared, governed ecosystem that matches educational services with precise learning needs."
       }
     ],
     capabilities: [
@@ -950,11 +964,11 @@ export const architectureRegistry: Record<string, ProductConfig> = {
         description: "Supports subject, class, board, curriculum, skill, location, online learning, offline learning, language preferences, and budget preferences search query dimensions."
       },
       {
-        title: "Intelligent Marketplace",
+        title: "Learning Orchestration Engine",
         description: "Manages the complete matching lifecycle: Student Requirement → AI Matching → Teacher Interest → Shortlisting → Communication → Enrollment → Learning → Feedback → Long-term Relationship."
       },
       {
-        title: "Teacher Management",
+        title: "Educator Management",
         description: "End-to-end registration, verification, profile completion, qualification verification, subject/board expertise mapping, availability management, and professional portfolios."
       },
       {
@@ -974,13 +988,13 @@ export const architectureRegistry: Record<string, ProductConfig> = {
         description: "Streamlined secure environment for inquiry management, real-time messaging, updates notification, interview scheduling, and enrollment workflows."
       },
       {
-        title: "Administration Console",
-        description: "Centralized panel for user management, identity verification, marketplace moderation, business analytics, reporting, taxonomy control, and AI model monitoring."
+        title: "Administrative Console",
+        description: "Centralized panel for user management, identity verification, learning network moderation, business analytics, reporting, taxonomy control, and AI model monitoring."
       }
     ],
     executiveArchitecture: "/images/architecture/Global_Tutor_Executive_Business_Architecture.png",
     technicalArchitecture: "/images/architecture/Global_Tutor_Technical_Architecture_Diagram.png",
-    architectureDescription: "Global Tutor integrates adaptive tutoring agents, availability matching, and automated certifications.",
+    architectureDescription: "Global Tutor integrates adaptive learning agents, availability matching, and automated certifications.",
     architectureLayers: [
       {
         title: "Experience Layer",
@@ -1010,38 +1024,33 @@ export const architectureRegistry: Record<string, ProductConfig> = {
         iconName: "book"
       },
       {
-        title: "Teachers",
-        description: "Build a professional teaching presence and receive qualified student inquiries.",
+        title: "Independent Faculty",
+        description: "Build a verified professional presence and receive qualified inquiries through intelligent matching.",
         iconName: "activity"
       },
       {
-        title: "Parents",
-        description: "Find trusted educators with verified credentials and transparent information.",
+        title: "Families & Guardians",
+        description: "Find trusted educators with verified credentials, governed learning pathways, and complete learning visibility.",
         iconName: "shield"
       },
       {
-        title: "Schools",
-        description: "Promote institutional programs and attract prospective students.",
+        title: "Educational Institutions",
+        description: "Promote institutional programs, facilitate institutional collaboration, and expand global reach.",
         iconName: "settings"
       },
       {
-        title: "Universities",
-        description: "Expand global reach through digital discovery and student engagement.",
+        title: "Corporate Learning Teams",
+        description: "Orchestrate employee skill development using verified learning pathways and intelligent discovery.",
         iconName: "brain"
       },
       {
-        title: "Coaching Centers",
-        description: "Generate qualified student leads using AI-assisted matching.",
+        title: "Coaching Organizations",
+        description: "Generate qualified inquiries and manage learning delivery using an enterprise education ecosystem.",
         iconName: "activity"
       },
       {
-        title: "Educational Consultants",
-        description: "Offer advisory services through an integrated education marketplace.",
-        iconName: "scale"
-      },
-      {
-        title: "Government & NGOs",
-        description: "Support education accessibility through centralized educator discovery and digital learning initiatives.",
+        title: "Government Education Programs",
+        description: "Support education accessibility through governed learning platforms and centralized educator discovery.",
         iconName: "shield"
       }
     ],
@@ -1055,7 +1064,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
           "Student onboarding",
           "Verification workflows",
           "Search engine",
-          "Marketplace foundation",
+          "Learning network foundation",
           "Profile management",
           "Administration portal",
           "Authentication",
@@ -1064,11 +1073,11 @@ export const architectureRegistry: Record<string, ProductConfig> = {
       },
       {
         phase: "Phase 2",
-        title: "Intelligent Marketplace",
+        title: "Intelligent Learning Network",
         status: "Current",
         items: [
           "AI-powered recommendations",
-          "Requirement marketplace",
+          "Requirement orchestration",
           "Intelligent matching",
           "Institution onboarding",
           "Enhanced search",
@@ -1078,7 +1087,7 @@ export const architectureRegistry: Record<string, ProductConfig> = {
       },
       {
         phase: "Phase 3",
-        title: "Learning Ecosystem",
+        title: "Connected Learning Ecosystem",
         status: "Planned",
         items: [
           "Course marketplace",
@@ -1087,20 +1096,10 @@ export const architectureRegistry: Record<string, ProductConfig> = {
           "AI learning assistant",
           "Digital classrooms",
           "Assessment modules",
-          "Certification management"
-        ]
-      },
-      {
-        phase: "Phase 4",
-        title: "Global Education Network",
-        status: "Planned",
-        items: [
           "International expansion",
           "Multilingual platform",
           "Cross-border education discovery",
           "Global institution partnerships",
-          "AI education advisor",
-          "Education intelligence platform",
           "Education ecosystem analytics"
         ]
       }

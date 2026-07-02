@@ -3,24 +3,34 @@ import { motion } from "framer-motion";
 export function EnterpriseDomains() {
   const domains = [
     {
-      title: "Legal Intelligence",
-      description: "Navigating complex Indian and international legal frameworks. Transforming statutes, case records, and regulatory archives into queryable, citation-linked legal assets.",
-      focus: "Statutory Search • Citation Analysis • Legal Workflows"
-    },
-    {
-      title: "Enterprise Knowledge Management",
+      title: "Enterprise Knowledge Intelligence",
+      platform: "Powered by PAAI",
       description: "Bridging communication silos across fragmented legacy databases and applications. Unifying institutional memory and providing semantic search for executive decision support.",
       focus: "Cross-System Retrieval • Semantic Memory • Executive Briefings"
     },
     {
-      title: "AI Transformation",
+      title: "Enterprise Legal Intelligence",
+      platform: "Powered by LegalPA",
+      description: "Navigating complex Indian and international legal frameworks. Transforming statutes, case records, and regulatory archives into queryable, citation-linked legal assets.",
+      focus: "Statutory Search • Citation Analysis • Legal Workflows"
+    },
+    {
+      title: "Enterprise AI Intelligence",
+      platform: "Powered by AI Universe",
       description: "Guiding organizations through responsible adoption of machine learning. Implementing role-based access controls (RBAC) and data sovereignty checkpoints for governed systems.",
       focus: "Responsible AI • Governance Frameworks • Custom LLM RAG"
     },
     {
-      title: "Software Engineering Excellence",
+      title: "Enterprise Software Engineering",
+      platform: "Powered by SDLC Factory",
       description: "Industrializing the software development lifecycle. Translating product intent and system requirements directly into governed, auditable, and production-ready source assets.",
       focus: "Lifecycle Automation • Architecture Consistency • Asset Traceability"
+    },
+    {
+      title: "Enterprise Learning",
+      platform: "Powered by Global Tutor",
+      description: "Structuring corporate and educational learning paths through intelligent, adaptive platforms. Ensuring standardized capability development across the enterprise.",
+      focus: "Adaptive Learning • Capability Tracking • Institutional Training"
     }
   ];
 
@@ -56,9 +66,14 @@ export function EnterpriseDomains() {
               className="p-8 border border-border bg-white shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between"
             >
               <div>
-                <h4 className="text-xl font-bold text-primary mb-3">
+                <h4 className="text-xl font-bold text-primary mb-1">
                   {dom.title}
                 </h4>
+                {dom.platform && (
+                  <p className="text-xs font-mono font-bold text-accent mb-4">
+                    {dom.platform}
+                  </p>
+                )}
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
                   {dom.description}
                 </p>

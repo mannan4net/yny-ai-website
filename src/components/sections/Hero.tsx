@@ -59,14 +59,14 @@ export function Hero() {
                 className="inline-flex items-center justify-center h-14 px-8 bg-primary text-primary-foreground font-semibold hover:bg-primary/95 transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-none shadow-sm"
                 data-testid="link-products-hero"
               >
-                Explore Platforms
+                Explore Enterprise Platforms
               </Link>
               <Link 
                 href="/contact"
                 className="inline-flex items-center justify-center h-14 px-8 bg-white border border-border text-primary font-semibold hover:bg-muted transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-none shadow-sm"
                 data-testid="link-contact-hero"
               >
-                Talk to Us
+                Review Architecture
               </Link>
             </motion.div>
           </div>

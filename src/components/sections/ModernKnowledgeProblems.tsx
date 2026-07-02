@@ -1,22 +1,31 @@
 import { motion } from "framer-motion";
 
-export function Problem() {
+export function ModernKnowledgeProblems() {
   const challenges = [
     {
-      title: "Fragmented Legal Knowledge",
-      description: "Legal research remains highly inefficient. Statutes, amendments, regulations, and judicial case laws are fragmented across dozens of disconnected platforms, creating significant compliance risks."
-    },
-    {
       title: "Isolated Institutional Knowledge",
+      platform: "Solved by PAAI",
       description: "Organizations remain unable to tap into their own intellectual capital. Decades of institutional knowledge, documentation, legacy database records, and chat history stay trapped in silos."
     },
     {
-      title: "Ungoverned AI Adoption",
+      title: "Legal Knowledge Complexity",
+      platform: "Solved by LegalPA",
+      description: "Legal research remains highly inefficient. Statutes, amendments, regulations, and judicial case laws are fragmented across dozens of disconnected platforms, creating significant compliance risks."
+    },
+    {
+      title: "AI Discovery Challenges",
+      platform: "Solved by AI Universe",
       description: "Adopting AI tools without strict access controls, semantic boundaries, and compliance guardrails compromises proprietary information, resulting in lack of trust and security."
     },
     {
       title: "Sluggish Software Delivery",
+      platform: "Solved by SDLC Factory",
       description: "Despite powerful modern developer tooling, software delivery remains slow due to fragmented business requirements, inconsistent architectural definitions, and poor end-to-end asset traceability."
+    },
+    {
+      title: "Inconsistent Enterprise Learning",
+      platform: "Solved by Global Tutor",
+      description: "Corporate training remains static and generic. Developing organizational capabilities is difficult without adaptive, personalized learning paths tied to strategic business objectives."
     }
   ];
 
@@ -34,13 +43,13 @@ export function Problem() {
             The Challenge
           </h2>
           <h3 className="text-3xl font-bold text-primary tracking-tight">
-            The Modern Knowledge Problem
+            Modern Knowledge Problems
           </h3>
           <div className="w-20 h-1 bg-primary mt-4"></div>
         </motion.div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -52,8 +61,8 @@ export function Problem() {
               className="p-8 border border-border bg-white shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between"
             >
               <div>
-                <span className="inline-block text-[10px] font-mono font-bold text-accent uppercase tracking-widest mb-4">
-                  [CHALLENGE 0{i + 1}]
+                <span className="inline-block text-xs font-mono font-bold text-accent mb-4">
+                  0{i + 1} // {challenge.platform}
                 </span>
                 <h4 className="text-lg font-bold text-primary mb-3">
                   {challenge.title}

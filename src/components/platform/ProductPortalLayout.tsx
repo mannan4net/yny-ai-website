@@ -50,10 +50,24 @@ export function ProductPortalLayout({ slug }: ProductPortalLayoutProps) {
         {/* 1. Overview */}
         <div id="overview" className="scroll-mt-32 space-y-8">
           <PlatformHero 
+            badge={config.badge}
+            classification={config.classification}
             category={config.category}
             title={config.title}
             description={config.description}
           />
+
+          {config.kpis && config.kpis.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+              {config.kpis.slice(0, 2).map((kpi, index) => (
+                <div key={index} className="bg-slate-50 border border-border p-8 rounded-xl flex flex-col justify-center">
+                  <div className="text-4xl font-bold text-primary mb-2">{kpi.value}</div>
+                  <h3 className="text-sm font-bold uppercase tracking-widest text-slate-800">{kpi.label}</h3>
+                  {kpi.description && <p className="text-slate-600 mt-2 text-sm">{kpi.description}</p>}
+                </div>
+              ))}
+            </div>
+          )}
 
           {config.vision && config.mission && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12 bg-slate-50 border border-border p-8 rounded-xl">

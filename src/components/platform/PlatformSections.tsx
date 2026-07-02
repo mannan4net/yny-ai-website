@@ -4,15 +4,22 @@ import { Link } from "wouter";
 import { ArchitectureImage } from "./ArchitectureImage";
 
 // --- Hero ---
-export function PlatformHero({ category, title, description }: { category: string; title: string; description: string }) {
+export function PlatformHero({ badge, category, classification, title, description }: { badge?: string; category: string; classification?: string; title: string; description: string }) {
   return (
     <div id="overview" className="scroll-mt-32">
-      <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary mb-6">
-        {category}
-      </div>
+      {(badge || classification || category) && (
+        <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary mb-6 uppercase tracking-wider">
+          {badge || classification || category}
+        </div>
+      )}
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-6">
         {title}
       </h1>
+      {classification && (
+        <div className="text-2xl font-semibold text-slate-800 mb-6">
+          {classification}
+        </div>
+      )}
       <p className="text-xl text-muted-foreground leading-relaxed">
         {description}
       </p>
@@ -90,10 +97,7 @@ export function PlatformMethodology() {
           {steps.map((step, index) => (
             <React.Fragment key={step}>
               <div className="flex flex-col items-center">
-                <div className="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center font-bold text-lg border border-white/20 mb-3">
-                  {index + 1}
-                </div>
-                <span className="font-semibold text-sm tracking-wider uppercase">{step}</span>
+                <span className="font-semibold text-sm tracking-wider uppercase">0{index + 1} // {step}</span>
               </div>
               {index < steps.length - 1 && (
                 <div className="hidden md:block flex-1 h-px bg-white/30 w-12"></div>

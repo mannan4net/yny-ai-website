@@ -1,13 +1,15 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/seo/SEO";
 import { Hero } from "@/components/sections/Hero";
-import { FounderCredibility } from "@/components/sections/FounderCredibility";
+import { WhyYnYExists } from "@/components/sections/WhyYnYExists";
 import { ExperienceHighlights } from "@/components/sections/ExperienceHighlights";
+import { EnterpriseReality } from "@/components/sections/EnterpriseReality";
+import { EngineeringPhilosophy } from "@/components/sections/EngineeringPhilosophy";
+import { NarrativeBridge } from "@/components/sections/NarrativeBridge";
 import { EnterpriseDomains } from "@/components/sections/EnterpriseDomains";
-import { Problem } from "@/components/sections/Problem";
-import { Approach } from "@/components/sections/Approach";
+import { ModernKnowledgeProblems } from "@/components/sections/ModernKnowledgeProblems";
 import { ProductEcosystem } from "@/components/sections/ProductEcosystem";
-import { WhyYnY } from "@/components/sections/WhyYnY";
+import { FounderCredibility } from "@/components/sections/FounderCredibility";
 import { CTA } from "@/components/sections/CTA";
 import { Link } from "wouter";
 
@@ -15,37 +17,43 @@ export default function Home() {
   return (
     <Layout>
       <SEO 
-        title="YnY AI | Enterprise Knowledge &amp; Intelligence Platforms"
-        description="YnY AI is a founder-led venture focused on helping organizations modernize technology, accelerate digital transformation and unlock the value of AI."
+        title="YnY AI | Enterprise AI Architecture"
+        description="YnY is an Enterprise AI Architecture company translating decades of proven enterprise architecture experience into intelligent platforms for knowledge, legal, engineering, and business operations."
         canonicalUrl="/"
       />
       
       {/* 1. Hero */}
       <Hero />
       
-      {/* 2. Built on Real Enterprise Experience */}
-      <FounderCredibility />
+      {/* 2. Company Definition */}
+      <WhyYnYExists />
       
-      {/* 3. Experience Highlights */}
+      {/* 3. Social Proof */}
       <ExperienceHighlights />
       
-      {/* 4. Enterprise Domains & Solutions */}
+      {/* 4. Enterprise Reality */}
+      <EnterpriseReality />
+      
+      {/* 5. Engineering Philosophy */}
+      <EngineeringPhilosophy />
+      
+      {/* 6. Narrative Bridge */}
+      <NarrativeBridge />
+      
+      {/* 7. Enterprise Domains & Solutions */}
       <EnterpriseDomains />
       
-      {/* 5. The Modern Knowledge Problem */}
-      <Problem />
+      {/* 8. Modern Knowledge Problems */}
+      <ModernKnowledgeProblems />
       
-      {/* 6. Engineering Philosophy */}
-      <Approach />
-      
-      {/* 7. One Vision. Multiple Platforms */}
+      {/* 9. Platform Ecosystem */}
       <ProductEcosystem />
       
-      {/* 8. Why Organizations Partner With Us */}
-      <WhyYnY />
+      {/* 10. Founder */}
+      <FounderCredibility />
       
-      {/* 9. Architecture Insights */}
-      <section className="py-24 bg-muted border-t border-border">
+      {/* 11. Architecture Insights */}
+      <section className="py-24 bg-muted border-t border-b border-border">
         <div className="container mx-auto px-6 max-w-5xl text-center">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Architecture Insights</h2>
           <p className="text-xl text-muted-foreground leading-relaxed mb-8">
@@ -57,7 +65,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10. Footer Section */}
+      {/* 12. Call To Action (Footer) */}
       <CTA />
     </Layout>
   );

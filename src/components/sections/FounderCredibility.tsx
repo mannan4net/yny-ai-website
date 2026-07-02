@@ -55,7 +55,7 @@ export function FounderCredibility() {
                 Practical software led by architectural discipline.
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                YnY platforms are architected and led by founder Abdul Mannan, translating over two decades of systems engineering into production-ready software. Founder-led architecture with trusted implementation partners as required.
+                YnY platforms are personally architected and led by founder Abdul Mannan. The ecosystem translates over two decades of systems engineering into production-ready enterprise software, prioritizing architectural discipline over software trends.
               </p>
             </div>
 
@@ -65,7 +65,7 @@ export function FounderCredibility() {
                 Why YnY Exists
               </span>
               <blockquote className="text-base font-medium text-primary italic leading-relaxed">
-                "After two decades designing enterprise platforms, we repeatedly observed the same problem: organizations struggle to access, govern, and operationalize knowledge. YnY was created to bridge that gap through practical AI platforms."
+                "I founded YnY after repeatedly encountering the same architectural challenges across enterprise modernization programmes. Organizations consistently struggled to access, govern, and operationalize their own knowledge. These platforms were built to solve those exact problems."
               </blockquote>
             </div>
 
@@ -132,7 +132,7 @@ export function FounderCredibility() {
                 </div>
 
                 <div className="text-sm font-medium text-primary leading-relaxed border-l-2 border-primary/20 pl-4 py-1 italic bg-muted/20">
-                  "Twenty years of building enterprise systems has taught us that knowledge is the foundation of every successful AI initiative."
+                  "Twenty years of building enterprise systems has taught me that governed knowledge is the foundation of every successful transformation."
                 </div>
 
                 {/* Bottom: Trust Indicators Grid */}
